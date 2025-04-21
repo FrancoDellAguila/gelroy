@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="module_category_franchise" model="ir.module.category">
+    <field name="name">Franchise Management</field>
+    <field name="sequence">31</field>
+</record>
+<record id="group_franchise_manager" model="res.groups">
+    <field name="name">Franchise Manager</field>
+    <field name="category_id" ref="module_category_franchise"/>
+</record>
+<record id="group_franchise_user" model="res.groups">
+    <field name="name">Franchise User</field>
+    <field name="category_id" ref="module_category_franchise"/>
+</record>
+</odoo>

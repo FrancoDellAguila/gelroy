@@ -1,0 +1,118 @@
+<odoo>
+    <data>
+        <!-- Formulario de franquicia -->
+        <record id="franchise_form_view" model="ir.ui.view">
+            <field name="name">franchise.form.view</field>
+            <field name="model">gelroy.franchise</field>
+            <field name="arch" type="xml">
+                <form string="Franchise">
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" required="1" placeholder="Franchise Name"/>
+                            </h1>
+                            <h3>
+                                <field name="franchise_code" placeholder="Code"/>
+                            </h3>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="franchisee_id"/>
+                                <field name="franchise_type"/>
+                                <field name="opening_date"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <label for="street" string="Address"/>
+                                <div class="o_address_format">
+                                    <field name="street" placeholder="Street..."/>
+                                    <field name="street2" placeholder="Street 2..."/>
+                                    <field name="city" placeholder="City"/>
+                                    <field name="state_id" placeholder="State" options='{"no_open": True}'/>
+                                    <field name="zip" placeholder="ZIP"/>
+                                    <field name="country_id" placeholder="Country" options='{"no_open": True, "no_create": True}'/>
+                                </div>
+                                <field name="phone" widget="phone"/>
+                                <field name="mobile" widget="phone"/>
+                                <field name="email" widget="email"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Contract &amp; Financials">
+                                <group>
+                                    <field name="contract_start_date"/>
+                                    <field name="contract_end_date"/>
+                                    <field name="contract_duration_months"/> 
+                                    <field name="royalty_fee_percentage"/>
+                                </group>
+                            </page>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                            <page string="Internal Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vista árbol -->
+        <record id="franchise_tree_view" model="ir.ui.view">
+            <field name="name">franchise.tree.view</field>
+            <field name="model">gelroy.franchise</field>
+            <field name="arch" type="xml">
+                <tree string="Franchises">
+                    <field name="name"/>
+                    <field name="franchise_code"/>
+                    <field name="franchisee_id"/>
+                    <field name="city"/>
+                    <field name="franchise_type"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista búsqueda -->
+        <record id="franchise_search_view" model="ir.ui.view">
+            <field name="name">franchise.search.view</field>
+            <field name="model">gelroy.franchise</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="franchise_code"/>
+                    <field name="franchisee_id"/>
+                    <field name="city"/>
+                    <field name="franchise_type"/>
+                    <filter string="Active" name="active" domain="[('active','=',True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active','=',False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Type" name="group_by_type" context="{'group_by': 'franchise_type'}"/>
+                        <filter string="City" name="group_by_city" context="{'group_by': 'city'}"/>
+                        <filter string="Country" name="group_by_country" context="{'group_by': 'country_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Acción de ventana -->
+        <record id="franchise_action" model="ir.actions.act_window">
+            <field name="name">Franchises</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gelroy.franchise</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="franchise_search_view"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new franchise record.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menús -->
+        <menuitem id="menu_franchise_root" name="Franchise Management" sequence="10"/>
+        <menuitem id="menu_franchises" name="Franchises" parent="menu_franchise_root" action="franchise_action" sequence="1"/>
+    </data>
+</odoo>
