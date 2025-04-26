@@ -1,4 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_franchise_manager_id,access.franchise.manager,gelroy.model_gelroy_franchise,gelroy.group_franchise_manager,1,1,1,1
-access_franchise_user_id,access.franchise.user,gelroy.model_gelroy_franchise,gelroy.group_franchise_user,1,0,0,0
-access_franchise_all_id,access.franchise.all,gelroy.model_gelroy_franchise,,1,0,0,0
+access_franchise_manager_id,access.franchise.manager,model_gelroy_franchise,gelroy.group_franchise_manager,1,1,1,1
+access_franchise_user_id,access.franchise.user,model_gelroy_franchise,gelroy.group_franchise_user,1,0,0,0
+access_franchise_all_id,access.franchise.all,model_gelroy_franchise,,1,0,0,0
+
+access_royalty_payment_manager_id,access.royalty_payment.manager,model_gelroy_royalty_payment,gelroy.group_franchise_manager,1,1,1,1
+access_royalty_payment_user_id,access.royalty_payment.user,model_gelroy_royalty_payment,gelroy.group_franchise_user,1,0,0,0
+access_royalty_payment_all_id,access.royalty_payment.all,model_gelroy_royalty_payment,,1,0,0,0

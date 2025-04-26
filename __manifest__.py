@@ -12,7 +12,7 @@ Herramienta digital que centraliza y automatiza la administración de franquicia
     'website': "https://www.linkedin.com/in/franco-dell-aguila/",
     'category': 'Franchising',
     'version': '17.0.1.0.0',
-    'depends': ['base'],
+    'depends': ['base', 'mail', 'account'],
     'data': [
         'security/franchise_security.xml',
         'security/ir.model.access.csv',
