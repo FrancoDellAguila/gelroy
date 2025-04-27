@@ -53,70 +53,87 @@ class Franchise(models.Model):
         ('franchise_code_unique', 'unique(franchise_code)', 'Franchise Code must be unique!')
     ]
 
+    # Calcula la duración del contrato en meses.
     @api.depends('contract_start_date', 'contract_end_date')
     def _compute_contract_duration(self):
         for rec in self:
+            # Verifica que ambas fechas existan y la fecha de fin sea posterior a la de inicio.
             if rec.contract_start_date and rec.contract_end_date and rec.contract_end_date > rec.contract_start_date:
                 delta = relativedelta(rec.contract_end_date, rec.contract_start_date)
+                # Convierte la diferencia a meses (años * 12 + meses).
                 rec.contract_duration_months = delta.years * 12 + delta.months
             else:
                 rec.contract_duration_months = 0
 
+    # Calcula el número de registros de pago de regalías asociados a esta franquicia.
     @api.depends('royalty_payment_ids')
     def _compute_royalty_payment_count(self):
         for franchise in self:
+            # Asigna la cantidad de elementos en la relación One2many.
             franchise.royalty_payment_count = len(franchise.royalty_payment_ids)
 
     def _calculate_and_create_royalty_payment(self, period_start, period_end, sales_basis):
         """
-        Calculates royalty for a given period and basis, then creates a Royalty Payment record.
-        Called by a scheduled action.
+        Calcula la regalía para un período y base dados, luego crea un registro de Pago de Regalía.
+        Llamado por una acción planificada.
 
-        :param date period_start: Start date of the calculation period.
-        :param date period_end: End date of the calculation period.
-        :param float sales_basis: The amount (e.g., sales) on which the royalty is calculated.
-        :return: The created gelroy.royalty.payment record or None.
+        :param date period_start: Fecha de inicio del período de cálculo.
+        :param date period_end: Fecha de fin del período de cálculo.
+        :param float sales_basis: El monto (ej., ventas) sobre el cual se calcula la regalía.
+        :return: El registro gelroy.royalty.payment creado o None.
         """
+        # Asegura que el método se ejecute sobre un único registro.
         self.ensure_one()
 
+        # Si la franquicia no está activa, no calcula nada.
         if not self.active:
             return None
 
+        # Si el porcentaje de regalía es cero o negativo, no calcula nada.
         if self.royalty_fee_percentage <= 0:
             return None
 
+        # Si la franquicia no tiene una moneda definida, lanza un error.
         if not self.currency_id:
-             raise UserError(_("Cannot calculate royalty for franchise '%s' without a defined currency.") % self.name)
+             raise UserError(_("No se puede calcular la regalía para la franquicia '%s' sin una moneda definida.") % self.name)
 
+        # Calcula el monto de la regalía.
         calculated_amount = (sales_basis * self.royalty_fee_percentage) / 100.0
 
+        # Calcula la fecha de vencimiento (ej. 15 días después del fin de período).
         due_date = period_end + relativedelta(days=15)
 
+        # Prepara los valores para crear el nuevo registro de pago.
         payment_vals = {
             'franchise_id': self.id,
-            'calculation_date': fields.Date.context_today(self),
+            'calculation_date': fields.Date.context_today(self), # Fecha actual
             'period_start_date': period_start,
             'period_end_date': period_end,
-            'royalty_rate': self.royalty_fee_percentage,
-            'calculated_amount': calculated_amount,
-            'payment_due_date': due_date,
-            'state': 'calculated',
-            'currency_id': self.currency_id.id,
+            'royalty_rate': self.royalty_fee_percentage, # Tasa de regalía usada
+            'calculated_amount': calculated_amount, # Monto calculado
+            'payment_due_date': due_date, # Fecha de vencimiento
+            'state': 'calculated', # Estado inicial
+            'currency_id': self.currency_id.id, # Moneda
         }
 
+        # Crea el registro de pago de regalía.
         royalty_payment = self.env['gelroy.royalty.payment'].create(payment_vals)
-        self.message_post(body=_("Royalty payment calculated for period %s to %s.") % (period_start, period_end))
+        # Registra un mensaje en el chatter de la franquicia.
+        self.message_post(body=_("Pago de regalía calculado para el período %s a %s.") % (period_start, period_end))
 
+        # Devuelve el registro creado.
         return royalty_payment
 
     def action_view_royalty_payments(self):
+        # Asegura que la acción se ejecute sobre un único registro.
         self.ensure_one()
+        # Devuelve una acción de ventana para mostrar los pagos de regalía de esta franquicia.
         return {
-            'name': _('Royalty Payments'),
-            'type': 'ir.actions.act_window',
-            'res_model': 'gelroy.royalty.payment',
-            'view_mode': 'tree,form',
-            'domain': [('franchise_id', '=', self.id)],
-            'context': {'default_franchise_id': self.id}
+            'name': _('Pagos de Regalía'), # Título de la vista
+            'type': 'ir.actions.act_window', # Tipo de acción
+            'res_model': 'gelroy.royalty.payment', # Modelo a mostrar
+            'view_mode': 'tree,form', # Vistas disponibles (lista y formulario)
+            'domain': [('franchise_id', '=', self.id)], # Filtro para mostrar solo pagos de esta franquicia
+            'context': {'default_franchise_id': self.id} # Contexto para pre-rellenar la franquicia al crear nuevo pago
         }
 

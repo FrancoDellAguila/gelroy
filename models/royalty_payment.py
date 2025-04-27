@@ -7,6 +7,8 @@ class RoyaltyPayment(models.Model):
     _description = 'Franchise Royalty Payment'
     _order = 'payment_due_date desc'
 
+    name = fields.Char(string="Payment Reference", compute='_compute_name', store=True)
+
     franchise_id = fields.Many2one('gelroy.franchise', string='Franchise', required=True, ondelete='cascade')
     currency_id = fields.Many2one('res.currency', string='Currency', related='franchise_id.currency_id', store=True) 
     calculation_date = fields.Date(string='Calculation Date', default=fields.Date.context_today, required=True)
@@ -29,3 +31,12 @@ class RoyaltyPayment(models.Model):
     
     #invoice_id = fields.Many2one('account.move', string='Invoice', readonly=True) # dependencia 'account'
     notes = fields.Text(string='Notes')
+
+    # Crea el nombre del pago basado en el franquiciado y la fecha de fin del periodo.
+    @api.depends('franchise_id', 'period_end_date')
+    def _compute_name(self):
+        for payment in self:
+            name = ("Payment") 
+            if payment.franchise_id and payment.period_end_date:
+                name = f"{payment.franchise_id.name} - {payment.period_end_date.strftime('%m/%Y')}"
+            payment.name = name
