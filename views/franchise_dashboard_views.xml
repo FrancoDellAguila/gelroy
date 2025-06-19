@@ -1,0 +1,465 @@
+<odoo>
+    <data>
+    
+        <!-- ================================================================================ -->
+        <!--  VISTA EJECUTIVA - Solo las cards globales + pestañas globales -->
+        <!-- ================================================================================ -->
+        
+        <record id="franchise_executive_dashboard_view" model="ir.ui.view">
+            <field name="name">franchise.executive.dashboard.form</field>
+            <field name="model">gelroy.executive.dashboard</field> 
+            <field name="arch" type="xml">
+                <form string="Executive Dashboard" create="false" edit="false">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>🌐 Network Executive Dashboard</h1>
+                            <p style="color: #6c757d;">Global network overview - All franchises</p>
+                        </div>
+                        
+                        <!-- MISMAS CARDS GLOBALES DEL DASHBOARD ORIGINAL -->
+                        <div class="row mb-3">
+                            <!-- 1. Regalías Pendientes (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-info text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="outstanding_royalties" widget="monetary"/> 
+                                                </h3>
+                                                <p class="card-text">Outstanding Royalties</p>
+                                                <small>💰 Network Total</small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-balance-scale fa-2x" title="Royalties"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 2. Collection Rate (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-info text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="collection_rate" widget="percentage"/> 
+                                                </h3>
+                                                <p class="card-text">Collection Rate</p>
+                                                <small><field name="performance_status" nolabel="1"/></small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-balance-scale fa-2x" title="Collection Rate"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 3. Deuda de Stock (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-warning text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="stock_debt_total" widget="monetary"/> 
+                                                </h3>
+                                                <p class="card-text">Unpaid Stock Orders</p>
+                                                <small>📦 Network Total</small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-truck fa-2x" title="Stock Debt"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 4. Pedidos por Aprobar (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-warning text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="pending_approval_orders" widget="integer"/> 
+                                                </h3>
+                                                <p class="card-text">Orders Pending Approval</p>
+                                                <small>⏳ Network Workflow</small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-truck fa-2x" title="Pending Orders"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!-- ROW 2 CARDS -->
+                        <div class="row mb-3">
+                            <!-- 5. Franquicias Activas (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="active_franchises" widget="integer"/> 
+                                                </h3>
+                                                <p class="card-text">Active Franchises</p>
+                                                <small>🏢 Network Size</small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-building fa-2x" title="Active Franchises"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 6. Contratos por Vencer (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="contracts_expiring" widget="integer"/> 
+                                                </h3>
+                                                <p class="card-text">Contracts Expiring Soon</p>
+                                                <small>📋 Network Alert</small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-calendar fa-2x" title="Contracts Expiring"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- 7. Pagos Vencidos Count (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-danger text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="total_overdue_count" widget="integer"/>
+                                                </h3>
+                                                <p class="card-text">Total Overdue Items</p>
+                                                <small>⚠️ Network Alert</small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-exclamation-triangle fa-2x" title="Total Overdue Items"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 8. Monto Vencido (GLOBAL) -->
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="card bg-danger text-white">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <h3 class="card-title">
+                                                    <field name="total_overdue_amount" widget="monetary"/>
+                                                </h3>
+                                                <p class="card-text">Total Overdue Amount</p>
+                                                <small>📉 Network Risk</small>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <i class="fa fa-exclamation-triangle fa-2x" title="Total Overdue Amount"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- SOLO INFORMACIÓN GLOBAL EN PESTAÑAS -->
+                        <notebook>
+                            <page string="🌐 Network Overview">
+                                <group>
+                                    <group string="Global Franchise Totals">
+                                        <field name="active_franchises"/>
+                                    </group>
+                                    <group string="Global Contract Management">
+                                        <field name="average_contract_duration" widget="float" digits="[12,1]"/> <!-- ✅ ESPECIFICAR DECIMALES -->
+                                    </group>
+                                </group>
+                                
+                                <!-- Periods Analysis -->
+                                <group>
+                                    <group string="New Franchises by Period">
+                                        <field name="new_franchises_month"/>
+                                        <field name="new_franchises_quarter"/>
+                                        <field name="new_franchises_year"/>
+                                    </group>
+                                    <group string="Closed Franchises by Period">
+                                        <field name="closed_franchises_month"/>
+                                        <field name="closed_franchises_quarter"/>
+                                        <field name="closed_franchises_year"/>
+                                    </group>
+                                </group>
+                                <div class="alert alert-info" role="alert">
+                                    <strong>🌐 Network Overview:</strong> This dashboard shows global network data only - all information represents the entire franchise network.
+                                </div>
+                            </page>
+                            
+                            <page string="📊 Executive Summary">
+                                <group>
+                                    <group string="Royalties Financial Health">
+                                        <field name="average_royalty_per_franchise" widget="monetary"/>
+                                        <field name="outstanding_royalties" widget="monetary"/>
+                                        <field name="collection_rate" widget="percentage"/>
+                                        <field name="overdue_payments_count"/>
+                                        <field name="overdue_payments_amount" widget="monetary"/>
+                                    </group>
+                                    <group string="Stock Operations">
+                                        <field name="average_stock_debt" widget="monetary"/>
+                                        <field name="stock_debt_total" widget="monetary"/>
+                                        <field name="pending_approval_orders"/>
+                                        <field name="pending_delivery_orders"/>
+                                        <field name="stock_overdue_orders_count"/>
+                                        <field name="stock_overdue_orders_amount" widget="monetary"/>
+                                    </group>
+                                </group>
+
+                                <div class="alert alert-info" role="alert">
+                                    <strong>📊 Executive Summary:</strong> This dashboard shows global network data only - all information represents the entire franchise network.
+                                </div>
+                            </page>
+                        </notebook>
+                        
+                        <field name="currency_id" invisible="1"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ================================================================================ -->
+        <!-- NUEVA VISTA OPERATIVA - Filtros + análisis detallado -->
+        <!-- ================================================================================ -->
+
+        <record id="franchise_operational_dashboard_view" model="ir.ui.view">
+            <field name="name">franchise.operational.dashboard.form</field>
+            <field name="model">gelroy.franchise.dashboard</field>
+            <field name="arch" type="xml">
+                <form string="Operational Dashboard" create="false" edit="false">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="franchise_id" placeholder="All Franchises" 
+                                    options="{'no_create': True, 'no_open': True}"/>
+                            </h1>
+                            <p style="color: #6c757d;">Detailed operational analysis with filters</p>
+                        </div>
+                        
+                        <!-- FILTROS PROMINENTES -->
+                        <group>
+                            <group string="Analysis Filters">
+                                <field name="franchise_id"/>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                            </group>
+                        </group>
+                        
+                        <!-- MINI CARDS CON DATOS FILTRABLES -->
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <h4 style="color: #28a745; border-bottom: 1px solid #28a745; padding-bottom: 5px;">
+                                    🎯 Analysis Summary
+                                </h4>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-3">
+                            <!-- Cards pequeñas con datos filtrables -->
+                            <div class="col-lg-2 col-md-4 mb-3">
+                                <div class="card bg-info text-white" style="min-height: 120px;">
+                                    <div class="card-body text-center">
+                                        <h5><field name="total_royalties_outstanding" widget="monetary"/></h5>
+                                        <small>Royalties debt</small>
+                                    </div> 
+                                    <div class="align-self-center">
+                                        <i class="fa fa-balance-scale fa-2x" title="Royalties debt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-4 mb-3">
+                                <div class="card bg-info text-white" style="min-height: 120px;">
+                                    <div class="card-body text-center">
+                                        <h5><field name="royalty_collection_rate" widget="percentage"/></h5>
+                                        <small>Collection Rate</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <i class="fa fa-balance-scale fa-2x" title="Collection Rate"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-4 mb-3">
+                                <div class="card bg-warning text-white" style="min-height: 120px;">
+                                    <div class="card-body text-center">
+                                        <h5><field name="stock_debt_total" widget="monetary"/></h5>
+                                        <small>Unpaid Stock Orders</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <i class="fa fa-truck fa-2x" title="Unpaid Stock Orders"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-4 mb-3">
+                                <div class="card bg-warning text-white" style="min-height: 120px;">
+                                    <div class="card-body text-center">
+                                        <h5><field name="pending_approval_orders" widget="integer"/></h5>
+                                        <small>Pending Approval orders</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <i class="fa fa-truck fa-2x" title="Pending Approval orders"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                                                        <div class="col-lg-2 col-md-4 mb-3">
+                                <div class="card bg-danger text-white" style="min-height: 120px;">
+                                    <div class="card-body text-center">
+                                        <h5><field name="total_overdue_amount" widget="monetary"/></h5>
+                                        <small>Total Overdue Amount</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <i class="fa fa-exclamation-triangle fa-2x" title="Total Overdue Amount"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-md-4 mb-3">
+                                <div class="card bg-danger text-white" style="min-height: 120px;">
+                                    <div class="card-body text-center">
+                                        <h5><field name="total_overdue_count" widget="integer"/></h5>
+                                        <small>Total Overdue Count</small>
+                                    </div>
+                                    <div class="align-self-center">
+                                        <i class="fa fa-exclamation-triangle fa-2x" title="Total Overdue Count"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- ANÁLISIS DETALLADO  -->
+                        <notebook>
+                            <!-- FINANCIEROS (REGALÍAS) - FILTRABLE -->
+                            <page string="💰 Royalties Analysis">
+                                <group>
+                                    <group string="Royalties Overview ">
+                                        <field name="total_royalties_paid" widget="monetary"/>
+                                        <field name="total_royalties_outstanding" widget="monetary"/>
+                                        <field name="total_royalties_calculated" widget="monetary"/>
+                                        <field name="royalty_collection_rate" widget="percentage"/>
+                                    </group>
+                                    <group string="Overdue Overview">
+                                        <field name="overdue_royalty_payments_count"/>
+                                        <field name="overdue_royalty_payments_amount" widget="monetary"/>
+                                        <field name="performance_status"/>
+                                    </group>
+                                </group>
+                                
+                                <div class="alert alert-success" role="alert">
+                                    <strong>🎯 Filtered Data:</strong> This data respects the franchise and date filters above.
+                                </div>
+                            </page>
+                            
+                            <!-- FINANCIEROS (STOCK) -->
+                            <page string="📦 Orders Analysis">
+                                <group>
+                                    <group string="Stock Orders Overview ">
+                                        <field name="average_order_value" widget="monetary"/>
+                                        <field name="stock_debt_total" widget="monetary"/>
+                                        <field name="total_stock_orders_value" widget="monetary"/>
+                                        <field name="total_stock_orders_count"/>
+                                        
+                                    </group>
+                                    <group string="Overdue Overview">
+                                        <field name="stock_overdue_orders_count"/>
+                                        <field name="stock_overdue_orders_amount" widget="monetary"/>
+                                    </group>
+                                </group>
+                                
+                                <div class="alert alert-success" role="alert">
+                                    <strong>🎯 Filtered Data:</strong> This data respects the franchise and date filters above.
+                                </div>
+                            </page>
+                            
+                            <!-- OPERATIVOS -->
+                            <page string="🚚 Operations Analysis">
+                                <group>
+                                    <group string="Stock Order Status ">
+                                        <field name="pending_approval_orders"/>
+                                        <field name="pending_delivery_orders"/>
+                                        <field name="in_transit_orders"/>
+                                        <field name="delivered_orders"/>
+                                    </group>
+                                    <group string="Delivery Performance">
+                                        <field name="average_delivery_time"/>
+                                        <field name="average_delivery_from_approval"/>
+                                        <field name="on_time_delivery_rate" widget="percentage"/>
+                                    </group>
+                                </group>
+                                
+                                <div class="alert alert-success" role="alert">
+                                    <strong>🎯 Filtered Data:</strong> This data respects the franchise and date filters above.
+                                </div>
+                            </page>
+                        </notebook>
+                        
+                        <field name="currency_id" invisible="1"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ================================================================================ -->
+        <!-- ACTIONS PARA LAS NUEVAS VISTAS -->
+        <!-- ================================================================================ -->
+
+        <!-- Dashboard Ejecutivo -->
+        <record id="action_franchise_executive_dashboard" model="ir.actions.act_window">
+            <field name="name">Executive Dashboard</field>
+            <field name="res_model">gelroy.executive.dashboard</field>  
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="franchise_executive_dashboard_view"/>
+            <field name="target">current</field>
+            <field name="context">{
+                'create': False,
+                'edit': False,
+                'delete': False
+            }</field>
+        </record>
+
+        <!-- Dashboard Operativo -->
+        <record id="action_franchise_operational_dashboard" model="ir.actions.act_window">
+            <field name="name">Operational Dashboard</field>
+            <field name="res_model">gelroy.franchise.dashboard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="franchise_operational_dashboard_view"/>
+            <field name="target">current</field>
+            <field name="context">{
+                'create': False,
+                'edit': False,
+                'delete': False
+            }</field>
+        </record>
+
+    </data>
+</odoo>

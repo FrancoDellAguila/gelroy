@@ -1,0 +1,170 @@
+<odoo>
+    <data>
+        <!-- Production Planning Form View -->
+        <record id="production_planning_form_view" model="ir.ui.view">
+            <field name="name">production.planning.form</field>
+            <field name="model">gelroy.production.planning</field>
+            <field name="arch" type="xml">
+                <form string="Production Planning">
+                    <!--  ESTILOS CSS -->
+                    <style>
+                        .gelroy_bordered input,
+                        .gelroy_bordered textarea,
+                        .gelroy_bordered .o_input,
+                        .gelroy_bordered .o_field_widget input,
+                        .gelroy_bordered .o_field_widget textarea,
+                        .gelroy_bordered select {
+                            border: 1px solid #888 !important;
+                            border-radius: 4px;
+                            background: #fff !important;
+                            padding: 2px !important;
+                        }
+                        
+                        .gelroy_bordered .o_field_monetary input {
+                            border: 1px solid #28a745 !important;
+                            border-radius: 4px;
+                            background: #f8fff9 !important;
+                        }
+                        
+                        .gelroy_bordered .o_field_date input,
+                        .gelroy_bordered .o_field_datetime input {
+                            border: 1px solid #d33000 !important;
+                            border-radius: 4px;
+                            background: #f8f9ff !important;
+                        }
+                        
+                        .gelroy_readonly input,
+                        .gelroy_readonly textarea,
+                        .gelroy_readonly .o_input {
+                            border: 1px solid #ccc !important;
+                            background: #f5f5f5 !important;
+                            color: #666 !important;
+                        }
+                    </style>
+                    
+                    <header>
+                        <button name="action_confirm" string="Confirm" type="object" 
+                                invisible="state != 'draft'" class="oe_highlight"/>
+                        <button name="action_create_stock_order" string="Create Stock Order" 
+                                type="object" invisible="state != 'confirmed'" class="oe_highlight"/>
+                        <button name="action_view_stock_orders" string="View Stock Orders" 
+                                type="object" invisible="state not in ['stock_ordered', 'completed']"/>
+                        
+                        <button name="action_cancel" string="Cancel" type="object" 
+                                invisible="state in ['cancelled', 'completed']" 
+                                class="btn-danger" 
+                                confirm="Are you sure you want to cancel this production planning?"/>
+                        
+                        <button name="action_set_to_draft" string="Set to Draft" type="object" 
+                                invisible="state != 'cancelled'" class="btn-secondary"/>
+                        
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,stock_ordered,completed"/>
+                    </header>
+                    
+                    <sheet>
+                        <div class="alert alert-warning text-center" role="alert" invisible="state != 'cancelled'">
+                            <h5><i class="fa fa-times-circle" title="Cancelled Status"></i> <strong>CANCELLED</strong></h5>
+                            <p>This production planning has been cancelled.</p>
+                        </div>
+                        
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_stock_orders" type="object" 
+                                    class="oe_stat_button" icon="fa-shopping-cart" string="Stock Order">
+                                <field name="stock_order_count" widget="statinfo" 
+                                       string="Stock Order"/>
+                            </button>
+                        </div>
+                        
+                        <div class="gelroy_bordered">
+                            <group>
+                                <group>
+                                    <field name="name" readonly="state != 'draft'"/>
+                                    <field name="franchise_id" readonly="state != 'draft'"/>
+                                    <field name="franchisee_id"/>
+                                    <field name="planning_date" readonly="state != 'draft'"/>
+                                </group>
+                                <group>
+                                    <field name="period_start_date" readonly="state != 'draft'"/>
+                                    <field name="period_end_date" readonly="state != 'draft'"/>
+                                    <field name="total_recipes" readonly="1"/>
+                                    <field name="total_productions" readonly="1"/>
+                                    <field name="estimated_cost" widget="monetary" readonly="1"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </group>
+                            </group>
+                        </div>
+                        
+                        <notebook>
+                            <page string="Recipe Planning">
+                                <div class="gelroy_bordered">
+                                    <field name="planning_line_ids" readonly="state != 'draft'">
+                                        <tree editable="bottom">
+                                            <field name="sequence" widget="handle"/>
+                                            <field name="recipe_id"/>
+                                            <field name="estimated_quantity"/>
+                                            <field name="recipe_production_size" readonly="1"/>
+                                            <field name="total_productions" readonly="1"/>
+                                            <field name="recipe_cost" widget="monetary" readonly="1"/>
+                                            <field name="total_cost" widget="monetary" readonly="1"/>
+                                            <field name="currency_id" column_invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </div>
+                            </page>
+                            <page string="Notes">
+                                <div class="gelroy_bordered">
+                                    <field name="notes" readonly="state in ['stock_ordered', 'completed', 'cancelled']"/>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Production Planning Tree View -->
+        <record id="production_planning_tree_view" model="ir.ui.view">
+            <field name="name">production.planning.tree</field>
+            <field name="model">gelroy.production.planning</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state == 'completed'" 
+                      decoration-info="state == 'confirmed'" 
+                      decoration-warning="state == 'stock_ordered'"
+                      decoration-muted="state == 'cancelled'"
+                      decoration-bf="state == 'draft'"
+                      default_order="planning_date desc">
+                    
+                    <field name="name"/>
+                    <field name="franchise_id"/>
+                    <field name="planning_date"/>
+                    <field name="period_start_date"/>
+                    <field name="period_end_date"/>
+                    <field name="total_recipes"/>
+                    <field name="total_productions"/>
+                    <field name="estimated_cost" widget="monetary"/>
+                    
+                    <!-- Estado con widget badge -->
+                    <field name="state" widget="badge" 
+                           decoration-success="state == 'completed'"
+                           decoration-info="state == 'confirmed'"
+                           decoration-warning="state == 'stock_ordered'"
+                           decoration-danger="state == 'cancelled'"
+                           decoration-primary="state == 'draft'"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Production Planning Action -->
+        <record id="action_production_planning" model="ir.actions.act_window">
+            <field name="name">Production Planning</field>
+            <field name="res_model">gelroy.production.planning</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

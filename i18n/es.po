@@ -6,18 +6,214 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250418\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-24 16:59+0000\n"
-"PO-Revision-Date: 2025-04-24 16:59+0000\n"
-"Last-Translator: GitHub Copilot <>\n"
-"Language-Team: Spanish <>\n"
+"POT-Creation-Date: 2025-06-15 08:41+0000\n"
+"PO-Revision-Date: 2025-06-16 21:14+0200\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid ""
+"\n"
+"Please adjust the requested delivery date."
+msgstr ""
+"\n"
+"Por favor, ajuste la fecha de entrega solicitada."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "0.00"
+msgstr "0,00"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<i class=\"fa fa-balance-scale fa-2x\" title=\"Collection Rate\"/>"
+msgstr "<i class=\"fa fa-balance-scale fa-2x\" title=\"Tasa de Cobro\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<i class=\"fa fa-balance-scale fa-2x\" title=\"Royalties debt\"/>"
+msgstr "<i class=\"fa fa-balance-scale fa-2x\" title=\"Deuda de Regalías\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<i class=\"fa fa-balance-scale fa-2x\" title=\"Royalties\"/>"
+msgstr "<i class=\"fa fa-balance-scale fa-2x\" title=\"Regalías\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<i class=\"fa fa-building fa-2x\" title=\"Active Franchises\"/>"
+msgstr "<i class=\"fa fa-building fa-2x\" title=\"Franquicias Activas\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<i class=\"fa fa-calendar fa-2x\" title=\"Contracts Expiring\"/>"
+msgstr "<i class=\"fa fa-calendar fa-2x\" title=\"Contratos por Vencer\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<i class=\"fa fa-exclamation-triangle fa-2x\" title=\"Total Overdue Amount\"/>"
+msgstr "<i class=\"fa fa-exclamation-triangle fa-2x\" title=\"Monto Total Vencido\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<i class=\"fa fa-exclamation-triangle fa-2x\" title=\"Total Overdue Count\"/>"
+msgstr "<i class=\"fa fa-exclamation-triangle fa-2x\" title=\"Cantidad Total Vencida\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<i class=\"fa fa-exclamation-triangle fa-2x\" title=\"Total Overdue Items\"/>"
+msgstr "<i class=\"fa fa-exclamation-triangle fa-2x\" title=\"Pagos Totales Vencidos\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "<i class=\"fa fa-times-circle\" title=\"Cancelled Status\"/> <strong>CANCELLED</strong>"
+msgstr "<i class=\"fa fa-times-circle\" title=\"Estado Cancelado\"/> <strong>CANCELADO</strong>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<i class=\"fa fa-truck fa-2x\" title=\"Pending Approval orders\"/>"
+msgstr "<i class=\"fa fa-truck fa-2x\" title=\"Pedidos Pendientes de Aprobación\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<i class=\"fa fa-truck fa-2x\" title=\"Pending Orders\"/>"
+msgstr "<i class=\"fa fa-truck fa-2x\" title=\"Pedidos Pendientes\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<i class=\"fa fa-truck fa-2x\" title=\"Stock Debt\"/>"
+msgstr "<i class=\"fa fa-truck fa-2x\" title=\"Deuda de Stock\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<i class=\"fa fa-truck fa-2x\" title=\"Unpaid Stock Orders\"/>"
+msgstr "<i class=\"fa fa-truck fa-2x\" title=\"Pedidos de Stock Impagos\"/>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<small>Collection Rate</small>"
+msgstr "<small>Tasa de Cobro</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<small>Pending Approval orders</small>"
+msgstr "<small>Pedidos Pend. Aprobación</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<small>Royalties debt</small>"
+msgstr "<small>Deuda de Regalías</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<small>Total Overdue Amount</small>"
+msgstr "<small>Monto Total Vencido</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<small>Total Overdue Count</small>"
+msgstr "<small>Cantidad Total Vencida</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<small>Unpaid Stock Orders</small>"
+msgstr "<small>Pedidos de Stock Impagos</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<small>⏳ Network Workflow</small>"
+msgstr "<small>⏳ Flujo de Trabajo Red</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<small>⚠️ Network Alert</small>"
+msgstr "<small>⚠️ Alerta de Red</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<small>🏢 Network Size</small>"
+msgstr "<small>🏢 Tamaño de Red</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<small>💰 Network Total</small>"
+msgstr "<small>💰 Total de Red</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<small>📉 Network Risk</small>"
+msgstr "<small>📉 Riesgo de Red</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<small>📋 Network Alert</small>"
+msgstr "<small>📋 Alerta de Red</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<small>📦 Network Total</small>"
+msgstr "<small>📦 Total de Red</small>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_kanban_view
+msgid "<span class=\"text-muted\">Price: </span>"
+msgstr "<span class=\"text-muted\">Precio: </span>"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "<strong>DELIVERED:</strong> Payment is pending"
+msgstr "<strong>ENTREGADO:</strong> Pago pendiente"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "<strong>OVERDUE:</strong> This order is"
+msgstr "<strong>VENCIDO:</strong> Este pedido está"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+msgid "<strong>⚠️ OVERDUE:</strong> This payment is"
+msgstr "<strong>⚠️ VENCIDO:</strong> Este pago está"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<strong>🌐 Network Overview:</strong> This dashboard shows global network data only - all information represents the entire franchise network."
+msgstr "<strong>🌐 Resumen de Red:</strong> Este panel muestra solo datos globales de la red; toda la información representa a la red de franquicias completa."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "<strong>🎯 Filtered Data:</strong> This data respects the franchise and date filters above."
+msgstr "<strong>🎯 Datos Filtrados:</strong> Estos datos respetan los filtros de franquicia y fecha aplicados arriba."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid ""
+"<strong>💡 Tip:</strong> Add all ingredients needed for this recipe. \n"
+"                                    Drag and drop to reorder ingredients in the preparation sequence."
+msgstr ""
+"<strong>💡 Consejo:</strong> Agregue todos los ingredientes necesarios para esta receta. \n"
+"Arastre y suelte para reordenar los ingredientes en la secuencia de preparación."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "<strong>📊 Executive Summary:</strong> This dashboard shows global network data only - all information represents the entire franchise network."
+msgstr "<strong>📊 Resumen Ejecutivo:</strong> Este panel muestra solo datos globales de la red; toda la información representa a la red de franquicias completa."
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_needaction
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_needaction
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_needaction
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_needaction
 msgid "Action Needed"
 msgstr "Acción Requerida"
 
@@ -28,29 +224,69 @@ msgstr "Activar/Desactivar registro de franquicia"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__active
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__active
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_search_view
 msgid "Active"
 msgstr "Activo"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__active_franchises
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Active Franchises"
+msgstr "Franquicias Activas"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__activity_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__activity_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__activity_ids
 msgid "Activities"
 msgstr "Actividades"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_exception_decoration
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__activity_exception_decoration
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__activity_exception_decoration
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__activity_exception_decoration
 msgid "Activity Exception Decoration"
 msgstr "Decoración de Excepción de Actividad"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_state
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__activity_state
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__activity_state
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__activity_state
 msgid "Activity State"
 msgstr "Estado de Actividad"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_type_icon
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__activity_type_icon
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__activity_type_icon
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__activity_type_icon
 msgid "Activity Type Icon"
 msgstr "Icono de Tipo de Actividad"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise__monthly_revenue
+msgid "Actual revenue for royalty calculation"
+msgstr "Ingresos reales para cálculo de regalías"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Add detailed cooking instructions, preparation tips, storage notes, serving suggestions, and any other important recipe details..."
+msgstr "Añada instrucciones detalladas de cocción, consejos de preparación, notas de almacenamiento, sugerencias para servir y cualquier otro detalle importante de la receta..."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+msgid "Add internal notes about this franchise..."
+msgstr "Agregue notas internas sobre esta franquicia..."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__notes
+msgid "Additional Notes"
+msgstr "Notas Adicionales"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__notes
@@ -63,19 +299,196 @@ msgid "Address"
 msgstr "Dirección"
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "All Franchises"
+msgstr "Todas las Franquicias"
+
+#. module: gelroy
+#: model:ir.ui.menu,name:gelroy.menu_franchise_products_list
+msgid "All Products"
+msgstr "Todos los Productos"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__overdue_royalty_payments_amount
+msgid "Amount of overdue royalties"
+msgstr "Monto de regalías vencidas"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Analysis Filters"
+msgstr "Filtros de Análisis"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_recipe__category__appetizer
+msgid "Appetizer"
+msgstr "Aperitivo"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__state__approved
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__approved_by
+msgid "Approved By"
+msgstr "Aprobado Por"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__approved_date
+msgid "Approved Date"
+msgstr "Fecha de Aprobación"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "Are you sure you want to cancel this production planning?"
+msgstr "¿Está seguro de que desea cancelar esta planificación de producción?"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_attachment_count
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_attachment_count
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_attachment_count
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_attachment_count
 msgid "Attachment Count"
 msgstr "Número de Adjuntos"
 
 #. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/invoice.py:0
+#, python-format
+msgid "Automáticamente marcado como pagado por factura: %s"
+msgstr "Automáticamente marcado como pagado por factura: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Automatically marked as overdue"
+msgstr "Automáticamente marcado como vencido"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__product_availability__available
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__product_availability__available
+msgid "Available"
+msgstr "Disponible"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__available_franchise_count
+#: model:ir.model.fields,field_description:gelroy.field_product_template__available_franchise_count
+msgid "Available Franchise Count"
+msgstr "Conteo Franquicias Disponibles"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__available_franchise_types
+#: model:ir.model.fields,field_description:gelroy.field_product_template__available_franchise_types
+msgid "Available for Franchise Types"
+msgstr "Disponible para Tipos de Franquicia"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__available_franchise_ids
+#: model:ir.model.fields,field_description:gelroy.field_product_template__available_franchise_ids
+msgid "Available for Franchises"
+msgstr "Disponible para Franquicias"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__average_delivery_from_approval
+msgid "Average Delivery Time from Approval (Days)"
+msgstr "Tiempo Prom. Entrega desde Aprobación (Días)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__average_delivery_time
+msgid "Average Delivery Time from Shipped (Days)"
+msgstr "Tiempo Prom. Entrega desde Envío (Días)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__average_royalty_per_franchise
+msgid "Average Royalty Value"
+msgstr "Valor Promedio de Regalía"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__average_royalty_per_franchise
+msgid "Average Royalty per Active Franchise"
+msgstr "Regalía Promedio por Franquicia Activa"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__average_stock_debt
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__average_order_value
+msgid "Average S.O. Value"
+msgstr "Valor Promedio P.S."
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__average_delivery_time
+msgid "Average delivery time in days"
+msgstr "Tiempo promedio de entrega en días"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__average_royalty_per_franchise
+msgid "Average royalty per active franchise"
+msgstr "Regalía promedio por franquicia activa"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__average_delivery_from_approval
+msgid "Average time from approval to delivery"
+msgstr "Tiempo promedio desde la aprobación hasta la entrega"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__average_order_value
+msgid "Average value per stock order"
+msgstr "Valor promedio por pedido de stock"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__average_contract_duration
+msgid "Avg Contract Duration (Months)"
+msgstr "Duración Prom. Contrato (Meses)"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__product_availability__backorder
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__product_availability__backorder
+msgid "Backorder Only"
+msgstr "Solo Pedido Pendiente"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Batch size (e.g., 10, 20, 50)"
+msgstr "Tamaño de lote (ej. 10, 20, 50)"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_recipe__category__beverage
+msgid "Beverage"
+msgstr "Bebida"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+msgid "Calculate Royalty"
+msgstr "Calcular Regalía"
+
+#. module: gelroy
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__state__calculated
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
 msgid "Calculated"
 msgstr "Calculado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__total_royalties_calculated
+msgid "Calculated Royalties"
+msgstr "Regalías Calculadas"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__calculated_amount
 msgid "Calculated Royalty Amount"
 msgstr "Monto de Regalía Calculado"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Calculated amount must be greater than zero."
+msgstr "El monto calculado debe ser mayor a cero."
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__calculation_date
@@ -84,11 +497,115 @@ msgstr "Fecha de Cálculo"
 
 #. module: gelroy
 #. odoo-python
-#: code:addons/gelroy/models/models.py:0 code:addons/gelroy/models/models.py:0
+#: code:addons/gelroy/models/production.py:0
 #, python-format
-msgid ""
-"Cannot calculate royalty for franchise '%s' without a defined currency."
-msgstr "No se puede calcular la regalía para la franquicia '%s' sin una moneda definida."
+msgid "Cannot cancel a planning that is already cancelled or completed."
+msgstr "No se puede cancelar una planificación que ya está cancelada o completada."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot cancel an order that has been delivered or paid."
+msgstr "No se puede cancelar un pedido que ha sido entregado o pagado."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Cannot confirm planning without recipes."
+msgstr "No se puede confirmar la planificación sin recetas."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Cannot confirm planning: Period End Date (%s) must be after Period Start Date (%s)."
+msgstr "No se puede confirmar la planificación: La Fecha Fin de Periodo (%s) debe ser posterior a la Fecha Inicio de Periodo (%s)."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Cannot confirm planning: Period Start Date (%s) cannot be earlier than today (%s). Please update the period start date to today or a future date."
+msgstr "No se puede confirmar la planificación: La Fecha Inicio de Periodo (%s) no puede ser anterior a hoy (%s). Por favor, actualice la fecha de inicio a hoy o una fecha futura."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Cannot delete order line for product '%s'. Order '%s' is in state '%s' and is locked for modifications."
+msgstr "No se puede eliminar la línea de pedido para el producto '%s'. El pedido '%s' está en estado '%s' y está bloqueado para modificaciones."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot modify fields '%s' when order '%s' is in state '%s'. Order is locked for modifications."
+msgstr "No se pueden modificar los campos '%s' cuando el pedido '%s' está en estado '%s'. El pedido está bloqueado para modificaciones."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Cannot modify order line for product '%s'. Order '%s' is in state '%s' and is locked for modifications."
+msgstr "No se puede modificar la línea de pedido para el producto '%s'. El pedido '%s' está en estado '%s' y está bloqueado para modificaciones."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Cannot modify order lines when order is in state '%s'. Order: %s"
+msgstr "No se pueden modificar las líneas de pedido cuando el pedido está en estado '%s'. Pedido: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot modify order lines. Order '%s' is in state '%s' and is locked for modifications."
+msgstr "No se pueden modificar las líneas de pedido. El pedido '%s' está en estado '%s' y está bloqueado para modificaciones."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot put in transit. Insufficient stock for the following products:\n"
+msgstr "No se puede poner en tránsito. Existencias insuficientes de los siguientes productos:\n"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot submit an order without product lines."
+msgstr "No se puede enviar un pedido sin líneas de productos."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot submit order. The following products do not meet delivery time:\n"
+msgstr "No se puede enviar el pedido. Los siguientes productos no cumplen con el plazo de entrega:\n"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__payment_method__cash
+msgid "Cash"
+msgstr "Efectivo"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__category
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_search_view
+msgid "Category"
+msgstr "Categoría"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Category (e.g., Breads, Pastries, Desserts)"
+msgstr "Categoría (ej. Panes, Bollería, Postres)"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__payment_method__check
+msgid "Check"
+msgstr "Cheque"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__city
@@ -98,13 +615,69 @@ msgid "City"
 msgstr "Ciudad"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__closed_franchises_month
+msgid "Closed Franchises (Month)"
+msgstr "Franquicias Cerradas (Mes)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__closed_franchises_quarter
+msgid "Closed Franchises (Quarter)"
+msgstr "Franquicias Cerradas (Trimestre)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__closed_franchises_year
+msgid "Closed Franchises (Year)"
+msgstr "Franquicias Cerradas (Año)"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Closed Franchises by Period"
+msgstr "Franquicias Cerradas por Periodo"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__franchise_code
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
 msgid "Code"
 msgstr "Código"
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Collection Rate"
+msgstr "Tasa de Cobro"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__collection_rate
+msgid "Collection Rate (Last Month)"
+msgstr "Tasa de Cobro (Último Mes)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__performance_status
+msgid "Collection Rate Status"
+msgstr "Estado Tasa de Cobro"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_production_planning__state__completed
+msgid "Completed"
+msgstr "Completado"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_production_planning__state__confirmed
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__state__confirmed
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__franchisee_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__franchisee_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__franchisee_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__franchisee_id
 msgid "Contact person or company operating the franchise"
 msgstr "Persona de contacto o empresa que opera la franquicia"
 
@@ -129,6 +702,41 @@ msgid "Contract Start Date"
 msgstr "Fecha de Inicio de Contrato"
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+msgid "Contract Terms"
+msgstr "Términos del Contrato"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__contracts_expiring
+msgid "Contracts Expiring"
+msgstr "Contratos por Vencer"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Contracts Expiring Soon"
+msgstr "Contratos Próximos a Vencer"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Cook time in minutes (e.g., 45)"
+msgstr "Tiempo de cocción en minutos (ej. 45)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__cooking_time
+msgid "Cooking Time (minutes)"
+msgstr "Tiempo de cocción (minutos)"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_form_view
+msgid "Cost Price"
+msgstr "Precio de Coste"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__cost_per_production
+msgid "Cost per Production"
+msgstr "Coste por Producción"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__country_id
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_search_view
@@ -136,42 +744,250 @@ msgid "Country"
 msgstr "País"
 
 #. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_create_franchise_product
+msgid "Create Franchise Product"
+msgstr "Crear Producto de Franquicia"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Create Invoice"
+msgstr "Crear Factura"
+
+#. module: gelroy
+#: model:ir.ui.menu,name:gelroy.menu_create_franchise_product
+msgid "Create Product"
+msgstr "Crear Producto"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "Create Stock Order"
+msgstr "Crear Pedido de Stock"
+
+#. module: gelroy
 #: model_terms:ir.actions.act_window,help:gelroy.franchise_action
 msgid "Create a new franchise record."
 msgstr "Crear un nuevo registro de franquicia."
 
 #. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.royalty_payment_action
+msgid "Create a new royalty payment record."
+msgstr "Crea un nuevo Pago de Regalía"
+
+#. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.stock_order_action
+msgid "Create a new stock order."
+msgstr "Crea un nuevo Pedido de Stock"
+
+#. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.action_recipe
+msgid "Create your first recipe!"
+msgstr "Crea tu primer receta!"
+
+#. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.action_royalty_payments
+msgid "Create your first royalty payment"
+msgstr "Crea tu primer Pago de Regalía"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__create_uid
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__create_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__create_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__create_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__create_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__create_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__create_uid
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__create_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__create_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__create_date
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__create_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__create_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__create_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__create_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__create_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__create_date
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__create_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__create_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__create_date
 msgid "Created on"
 msgstr "Creado el"
 
 #. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Cron job: marked as overdue."
+msgstr "Tarea programada: marcado como vencido."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__currency_id
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__currency_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__currency_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__currency_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__currency_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__currency_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__currency_id
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__currency_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__currency_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__currency_id
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
 msgid "Currency"
 msgstr "Moneda"
 
 #. module: gelroy
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__description
-#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise__currency_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__currency_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning_line__currency_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__currency_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__currency_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order_line__currency_id
+msgid "Currency used for this franchise"
+msgstr "La moneda para los campos financieros relacionados con esta franquicia"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__display_name
+msgid "Dashboard Name"
+msgstr "Nombre de Panel"
+
+#. module: gelroy
+#: model:ir.ui.menu,name:gelroy.menu_franchise_dashboards
+msgid "Dashboards"
+msgstr "Paneles"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__payment_due_date
+msgid "Date when payment is due"
+msgstr "Fecha cuando vence el pago"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise__royalty_calculation_day
+msgid "Day of month when royalties are calculated (1-28)"
+msgstr "Día del mes cuando se calculan las regalías (1-28)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__days_overdue
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__days_overdue
+msgid "Days Overdue"
+msgstr "Días de Retraso"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise__royalty_payment_terms
+msgid "Days after calculation when payment is due"
+msgstr "Días después del cálculo cuando vence el pago"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "You must enter the period revenue before calculating."
+msgstr "Debe ingresar los ingresos del período antes de calcular."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "A due date is required to mark the payment as overdue."
+msgstr "Debe tener fecha de vencimiento para marcar como vencido."
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_recipe_ingredient__product_uom_id
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order_line__product_uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Unidad de medida predeterminada utilizada para todas las operaciones de stock."
+
+#. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.action_recipe
+msgid ""
+"Define recipes with ingredients, quantities, and cooking instructions.\n"
+"                    Monitor costs and production details for better planning."
+msgstr ""
+"Define recetas con ingredientes, cantidades e instrucciones de cocción.\n"
+"Supervisa los costos y los detalles de producción para una mejor planificación."
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__state__delivered
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Delivered"
+msgstr "Entregado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__delivered_date
+msgid "Delivered Date"
+msgstr "Fecha de Entrega"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__delivered_orders
+msgid "Delivered Orders"
+msgstr "Órdenes entregadas"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__delivery_address
+msgid "Delivery Address"
+msgstr "Dirección de Entrega"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Delivery Details"
+msgstr "Detalles de Entrega"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Delivery Performance"
+msgstr "Rendimiento de entregas"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Delivery and Payment Info"
+msgstr "Información de Entrega y Pago"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__description
 msgid "Description"
 msgstr "Descripción"
 
 #. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_recipe__category__dessert
+msgid "Dessert"
+msgstr "Postre"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Detailed operational analysis with filters"
+msgstr "Análisis operacional detallado con filtros"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__product_availability__discontinued
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__product_availability__discontinued
+msgid "Discontinued"
+msgstr "Descontinuado"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__display_name
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__display_name
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__display_name
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__display_name
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__display_name
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__display_name
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__display_name
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__display_name
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__display_name
 msgid "Display Name"
 msgstr "Nombre a Mostrar"
 
 #. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_production_planning__state__draft
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__state__draft
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__state__draft
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
 msgid "Draft"
 msgstr "Borrador"
 
@@ -181,28 +997,157 @@ msgid "Due Date"
 msgstr "Fecha de Vencimiento"
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+msgid "Due Date Month"
+msgstr "Mes de Vencimiento"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Due Today"
+msgstr "Vence Hoy"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "The calculated amount must be greater than zero."
+msgstr "El monto calculado debe ser mayor a cero."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "The payment is not overdue yet."
+msgstr "El pago no ha vencido aún."
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__payment_method__electronic
+msgid "Electronic Payment"
+msgstr "Pago Electrónico"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__email
 msgid "Email"
 msgstr "Correo Electrónico"
 
 #. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__priority__emergency
+msgid "Emergency"
+msgstr "Emergencia"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__date_to
+msgid "End date for filtering"
+msgstr "Fecha de fin para filtrar"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Enter recipe name (e.g., Hamburger Buns, Pizza Dough)..."
+msgstr "Ingrese el nombre de la receta (ej. Pan de Hamburguesa, Masa de Pizza)..."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Error deleting draft invoices: %s"
+msgstr "Error al eliminar facturas en borrador: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Error updating stock for product %s: %s"
+msgstr "Error actualizando stock de producto %s: %s"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__estimated_cost
+msgid "Estimated Cost"
+msgstr "Coste Estimado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__estimated_quantity
+msgid "Estimated Quantity"
+msgstr "Cantidad Estimada"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Estimated quantity must be greater than zero."
+msgstr "Cantidad estimada debe ser mayor a cero."
+
+#. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_franchise_executive_dashboard
+#: model:ir.ui.menu,name:gelroy.menu_franchise_executive_dashboard
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Executive Dashboard"
+msgstr "Panel Ejecutivo"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_gelroy_executive_dashboard
+msgid "Executive Global Dashboard"
+msgstr "Panel Global Ejecutivo"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_product_product__product_lead_time
+msgid "Expected delivery time for this product"
+msgstr "Tiempo de entrega esperado para este producto"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Invoices deleted in cascade: %s"
+msgstr "Facturas eliminadas en cascada: %s"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__franchise_id
+msgid "Filter by specific franchise"
+msgstr "Filtrar por franquicia específica"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+msgid "Financial Summary"
+msgstr "Resumen Financiero"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_follower_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_follower_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_follower_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_follower_ids
 msgid "Followers"
 msgstr "Seguidores"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_partner_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_partner_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_partner_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores (Contactos)"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__activity_type_icon
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__activity_type_icon
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__activity_type_icon
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
 msgstr "Icono de Font Awesome, p.ej. fa-tasks"
 
 #. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_recipe__category__food
+msgid "Food"
+msgstr "Comida"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__franchise_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__franchise_id
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__franchise_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__franchise_id
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
 msgid "Franchise"
 msgstr "Franquicia"
 
@@ -212,13 +1157,22 @@ msgid "Franchise Code must be unique!"
 msgstr "¡El Código de Franquicia debe ser único!"
 
 #. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_franchise_dashboard
+msgid "Franchise Dashboard"
+msgstr "Panel de Franquicia"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_gelroy_franchise_dashboard
+msgid "Franchise Dashboard with KPIs"
+msgstr "Panel de Franquicia con KPIs"
+
+#. module: gelroy
 #: model:ir.model,name:gelroy.model_gelroy_franchise
 msgid "Franchise Information"
 msgstr "Información de Franquicia"
 
 #. module: gelroy
 #: model:ir.module.category,name:gelroy.module_category_franchise
-#: model:ir.ui.menu,name:gelroy.menu_franchise_root
 msgid "Franchise Management"
 msgstr "Gestión de Franquicias"
 
@@ -234,9 +1188,29 @@ msgid "Franchise Name"
 msgstr "Nombre de la Franquicia"
 
 #. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_franchise_products
+msgid "Franchise Products"
+msgstr "Productos de Franquicia"
+
+#. module: gelroy
 #: model:ir.model,name:gelroy.model_gelroy_royalty_payment
 msgid "Franchise Royalty Payment"
 msgstr "Pago de Regalía de Franquicia"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_form_view
+msgid "Franchise Settings"
+msgstr "Opciones de Franquicia"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_gelroy_stock_order
+msgid "Franchise Stock Order"
+msgstr "Pedido de Stock"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_search_view
+msgid "Franchise Types"
+msgstr "Tipos de Franquicia"
 
 #. module: gelroy
 #: model:res.groups,name:gelroy.group_franchise_user
@@ -244,9 +1218,38 @@ msgid "Franchise User"
 msgstr "Usuario de Franquicia"
 
 #. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Franchise is required to create invoice."
+msgstr "La franquicia es requerida para crear la factura."
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_product_product__franchise_qty_multiple
+msgid "Franchise orders must be in multiples of this quantity"
+msgstr "Las Órdenes de franquicia deben ser en múltiplos de esta cantidad"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_account_bank_statement_line__franchise_id
+#: model:ir.model.fields,help:gelroy.field_account_move__franchise_id
+#: model:ir.model.fields,help:gelroy.field_account_payment__franchise_id
+msgid "Franchise related to this invoice"
+msgstr "Franquicia asociada a esta factura"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__franchisee_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__franchisee_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__franchisee_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__franchisee_id
 msgid "Franchisee"
 msgstr "Franquiciado"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Franchisee is required to create invoice."
+msgstr "El franquiciado es requerido para crear la factura."
 
 #. module: gelroy
 #: model:ir.actions.act_window,name:gelroy.franchise_action
@@ -256,46 +1259,143 @@ msgid "Franchises"
 msgstr "Franquicias"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__date_from
+msgid "From Date"
+msgstr "Desde Fecha"
+
+#. module: gelroy
+#: model:ir.ui.menu,name:gelroy.menu_gelroy_main
+msgid "Gelroy"
+msgstr "Gelroy"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__invoice_id
+msgid "Generated Invoice"
+msgstr "Factura Generada"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Global Contract Management"
+msgstr "Gestión Global de Contratos"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Global Franchise Totals"
+msgstr "Totales Globales de Franquicia"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_executive_dashboard__stock_overdue_orders_amount
+msgid "Global amount of overdue stock orders"
+msgstr "Monto global de pedidos de stock vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_executive_dashboard__stock_overdue_orders_count
+msgid "Global count of overdue stock orders"
+msgstr "Conteo global de pedidos de stock vencidos"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Global network overview - All franchises"
+msgstr "Resumen global de la red - Todas las franquicias"
+
+#. module: gelroy
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
 msgid "Group By"
 msgstr "Agrupar por"
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Has Due Date"
+msgstr "Tiene Fecha de Vencimiento"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__has_message
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__has_message
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__has_message
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__has_message
 msgid "Has Message"
 msgstr "Tiene Mensaje"
 
 #. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.action_franchise_dashboard
+msgid "Here you can view key performance indicators and metrics for your franchise network."
+msgstr "Aquí puede ver los indicadores clave de rendimiento y métricas para su red de franquicias."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__id
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__id
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__id
 msgid "ID"
 msgstr "ID"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_exception_icon
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__activity_exception_icon
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__activity_exception_icon
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__activity_exception_icon
 msgid "Icon"
 msgstr "Icono"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__activity_exception_icon
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__activity_exception_icon
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__activity_exception_icon
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__activity_exception_icon
 msgid "Icon to indicate an exception activity."
 msgstr "Icono para indicar una actividad de excepción."
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__message_needaction
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__message_needaction
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__message_needaction
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__message_needaction
 msgid "If checked, new messages require your attention."
 msgstr "Si está marcado, los nuevos mensajes requieren su atención."
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__message_has_error
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__message_has_sms_error
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__message_has_error
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__message_has_sms_error
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__message_has_error
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__message_has_sms_error
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__message_has_error
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
 
 #. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__state__in_transit
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "In Transit"
+msgstr "En Tránsito"
+
+#. module: gelroy
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_search_view
 msgid "Inactive"
 msgstr "Inactivo"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__recipe_cost
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__ingredient_cost
+msgid "Ingredient Cost"
+msgstr "Coste de Ingredientes"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__ingredient_ids
+msgid "Ingredients"
+msgstr "Ingredientes"
 
 #. module: gelroy
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
@@ -303,31 +1403,143 @@ msgid "Internal Notes"
 msgstr "Notas Internas"
 
 #. module: gelroy
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__invoice_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__product_code
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__product_code
+msgid "Internal Reference"
+msgstr "Referencia Interna"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
 msgid "Invoice"
 msgstr "Factura"
 
 #. module: gelroy
-#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__state__invoiced
-msgid "Invoiced"
-msgstr "Facturado"
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__invoice_count
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__invoice_count
+msgid "Invoice Count"
+msgstr "Número de Facturas"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Invoice already exists for this order: %s"
+msgstr "Ya existe una factura para este pedido: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Invoice already exists for this royalty payment: %s"
+msgstr "Ya existe una factura para este pago de regalías: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/invoice.py:0
+#, python-format
+msgid "Invoice already generated for this order."
+msgstr "Ya se ha generado una factura para este pedido."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Invoice created: %s (Amount: %s)"
+msgstr "Factura creada: %s (Monto: %s)"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Invoice created: %s (Total: %s)"
+msgstr "Factura creada: %s (Total: %s)"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_tree_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+#, python-format
+msgid "Invoices"
+msgstr "Facturas"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_is_follower
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_is_follower
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_is_follower
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_is_follower
 msgid "Is Follower"
 msgstr "Es Seguidor"
 
 #. module: gelroy
+#: model:ir.model,name:gelroy.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__available_franchise_types__kiosk
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__available_franchise_types__kiosk
+msgid "Kiosk"
+msgstr "Quiosco"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "The period end date must be after the start date."
+msgstr "La fecha de fin del período debe ser posterior a la fecha de inicio."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+msgid "Last Month"
+msgstr "Último Mes"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__last_revenue_update
+msgid "Last Revenue Update"
+msgstr "Última Actualización de Ingresos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__write_uid
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__write_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__write_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__write_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__write_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__write_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__write_uid
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__write_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__write_uid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__write_uid
 msgid "Last Updated by"
 msgstr "Última Actualización por"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__write_date
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__write_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__write_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__write_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__write_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__write_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__write_date
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__write_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__write_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__write_date
 msgid "Last Updated on"
 msgstr "Última Actualización el"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__product_availability__limited
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__product_availability__limited
+msgid "Limited Stock"
+msgstr "Stock Limitado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__notes
+msgid "Line Notes"
+msgstr "Notas"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__image
@@ -335,65 +1547,317 @@ msgid "Logo/Image"
 msgstr "Logo/Imagen"
 
 #. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "The period revenue cannot be negative."
+msgstr "Los ingresos del período no pueden ser negativos."
+
+#. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.action_royalty_payments
+msgid "Manage franchise royalty payments and generate invoices automatically."
+msgstr "Gestione los pagos de regalías de franquicias y genere facturas automáticamente."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Mark as Delivered"
+msgstr "Marcar como Entregado"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Mark as Paid"
+msgstr "Marcar como Pagado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__max_franchise_qty
+#: model:ir.model.fields,field_description:gelroy.field_product_template__max_franchise_qty
+msgid "Maximum Franchise Quantity"
+msgstr "Cantidad Máxima de Franquicia"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/product_extension.py:0
+#, python-format
+msgid "Maximum franchise quantity cannot be less than minimum quantity."
+msgstr "La cantidad máxima de franquicia no puede ser menor que la cantidad mínima."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/product_extension.py:0
+#, python-format
+msgid "Maximum order quantity for %s is %s"
+msgstr "La cantidad máxima de pedido para %s es %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Maximum quantity for %s is %s"
+msgstr "La cantidad máxima para %s es %s"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_product_product__max_franchise_qty
+msgid "Maximum quantity that can be ordered by franchises (0 = no limit)"
+msgstr "Cantidad máxima que pueden pedir las franquicias (0 = sin límite)"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_has_error
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_has_error
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_has_error
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_has_error
 msgid "Message Delivery error"
 msgstr "Error de Entrega de Mensaje"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_ids
 msgid "Messages"
 msgstr "Mensajes"
 
 #. module: gelroy
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__mobile
-msgid "Mobile"
-msgstr "Móvil"
+#. odoo-python
+#: code:addons/gelroy/models/franchise.py:0
+#, python-format
+msgid "My Franchise Panel"
+msgstr "Mi Panel de Franquicia"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__min_franchise_qty
+#: model:ir.model.fields,field_description:gelroy.field_product_template__min_franchise_qty
+msgid "Minimum Franchise Quantity"
+msgstr "Cantidad Mínima de Franquicia"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/product_extension.py:0
+#, python-format
+msgid "Minimum franchise quantity cannot be negative."
+msgstr "La cantidad mínima de franquicia no puede ser negativa."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/product_extension.py:0
+#, python-format
+msgid "Minimum order quantity for %s is %s"
+msgstr "La cantidad mínima de pedido para %s es %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Minimum quantity for %s is %s"
+msgstr "La cantidad mínima para %s es %s"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_product_product__min_franchise_qty
+msgid "Minimum quantity that can be ordered by franchises"
+msgstr "Cantidad mínima que pueden pedir las franquicias"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__available_franchise_types__mobile
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__available_franchise_types__mobile
+msgid "Mobile Unit"
+msgstr "Unidad Móvil"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__monthly_revenue
+msgid "Monthly Revenue"
+msgstr "Ingresos Mensuales"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Must specify a requested delivery date."
+msgstr "Debe especificar una fecha de entrega solicitada."
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__my_activity_date_deadline
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__my_activity_date_deadline
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__my_activity_date_deadline
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__my_activity_date_deadline
 msgid "My Activity Deadline"
 msgstr "Fecha Límite de Mi Actividad"
 
 #. module: gelroy
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_date_deadline
-msgid "Next Activity Deadline"
-msgstr "Fecha Límite Próxima Actividad"
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__product_name
+msgid "Name"
+msgstr "Nombre"
 
 #. module: gelroy
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_summary
-msgid "Next Activity Summary"
-msgstr "Resumen Próxima Actividad"
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__new_franchises_month
+msgid "New Franchises (Month)"
+msgstr "Nuevas Franquicias (Mes)"
 
 #. module: gelroy
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_type_id
-msgid "Next Activity Type"
-msgstr "Tipo Próxima Actividad"
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__new_franchises_quarter
+msgid "New Franchises (Quarter)"
+msgstr "Nuevas Franquicias (Trimestre)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__new_franchises_year
+msgid "New Franchises (Year)"
+msgstr "Nuevas Franquicias (Año)"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "New Franchises by Period"
+msgstr "Nuevas Franquicias por Periodo"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "No internal stock location found for company %s"
+msgstr "No se encontró ubicación de stock interna para la compañía %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/franchise.py:0
+#, python-format
+msgid "Cannot calculate royalty for franchise '%s' without a defined currency."
+msgstr "No se puede calcular la regalía para la franquicia '%s' sin una moneda definida."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "A payment that has already been registered cannot be canceled."
+msgstr "No se puede cancelar un pago que ya fue registrado."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Cannot delete the royalty payment '%s' because it has confirmed/paid invoices: %s. You must cancel or reverse these invoices manually first."
+msgstr "No se puede eliminar el pago de regalías '%s' porque tiene facturas confirmadas/pagadas: %s. Debe cancelar o revertir estas facturas manualmente."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot delete stock order '%s' because it has RECONCILED (paid) invoices: %s. You must unreconcile the payments and cancel these invoices manually."
+msgstr "No se puede eliminar la orden de stock '%s' porque tiene facturas CONCILIADAS (pagadas): %s. Debe desconciliar los pagos y cancelar estas facturas manualmente."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Cannot delete stock order '%s' because it has confirmed invoices: %s. You must cancel these invoices manually."
+msgstr "No se puede eliminar la orden de stock '%s' porque tiene facturas confirmadas: %s. Debe cancelar estas facturas manualmente."
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__priority__normal
+msgid "Normal"
+msgstr "Normal"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__notes
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__notes
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__notes
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__notes
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__notes
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__notes
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
 msgid "Notes"
 msgstr "Notas"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_needaction_counter
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_needaction_counter
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_needaction_counter
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_needaction_counter
 msgid "Number of Actions"
 msgstr "Número de Acciones"
 
 #. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__stock_debt_orders_count
+msgid "Number of delivered but unpaid orders"
+msgstr "Número de pedidos entregados pero no pagados"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_has_error_counter
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_has_error_counter
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_has_error_counter
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_has_error_counter
 msgid "Number of errors"
 msgstr "Número de errores"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__message_needaction_counter
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__message_needaction_counter
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__message_needaction_counter
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__message_needaction_counter
 msgid "Number of messages requiring action"
 msgstr "Número de mensajes que requieren acción"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__message_has_error_counter
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__message_has_error_counter
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__message_has_error_counter
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "Número de mensajes con error de entrega"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__overdue_royalty_payments_count
+msgid "Number of overdue payments"
+msgstr "Número de pagos vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__stock_overdue_orders_count
+msgid "Number of overdue stock orders"
+msgstr "Número de pedidos de stock vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__on_time_delivery_rate
+msgid "On-Time Delivery Rate"
+msgstr "Tasa de Entrega a Tiempo"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Only approved orders can be put in transit."
+msgstr "Solo los pedidos aprobados pueden ponerse en tránsito."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Only cancelled plannings can be set back to draft."
+msgstr "Solo las planificaciones canceladas pueden volver a borrador."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Only confirmed plannings can generate stock orders."
+msgstr "Solo las planificaciones confirmadas pueden generar pedidos de stock."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Only confirmed, overdue or paid royalty payments can be invoiced."
+msgstr "Solo los pagos de regalías confirmados, vencidos o pagados pueden ser facturados."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Only delivered or overdue orders can be marked as paid. Current state: %s"
+msgstr "Solo los pedidos entregados o vencidos pueden marcarse como pagados. Estado actual: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Only delivered, in-transit or overdue orders can be invoiced."
+msgstr "Solo los pedidos entregados, en tránsito o vencidos pueden ser facturados."
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__opening_date
@@ -401,31 +1865,380 @@ msgid "Opening Date"
 msgstr "Fecha de Apertura"
 
 #. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_franchise_operational_dashboard
+#: model:ir.ui.menu,name:gelroy.menu_franchise_operational_dashboard
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Operational Dashboard"
+msgstr "Panel Operacional"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__order_date
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Order Date"
+msgstr "Fecha de Pedido"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__order_line_ids
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Order Lines"
+msgstr "Líneas de Pedido"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__name
+msgid "Order Reference"
+msgstr "Número de Pedido"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order approved by %s."
+msgstr "Pedido aprobado por %s."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order cancelled."
+msgstr "Pedido cancelado."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order delivered. Set Payment Due Date manually if needed."
+msgstr "Pedido entregado. Establezca la Fecha de Vencimiento de Pago manualmente si es necesario."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order in transit. No physical products to deduct from stock."
+msgstr "Pedido en tránsito. No hay productos físicos para deducir del stock."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order in transit. Stock deducted from stock.quant:"
+msgstr "Pedido en tránsito. Stock deducido de stock.quant:"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order marked as paid (was overdue by %s days)."
+msgstr "Pedido marcado como pagado (estaba vencido por %s días)."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order marked as paid."
+msgstr "Pedido marcado como pagado."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order reset to draft."
+msgstr "Pedido restablecido a borrador."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "Order submitted for approval."
+msgstr "Pedido enviado para aprobación."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__in_transit_orders
+msgid "Orders In Transit"
+msgstr "Pedidos En Tránsito"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__pending_approval_orders
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Orders Pending Approval"
+msgstr "Pedidos Pendientes de Aprobación"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__pending_delivery_orders
+msgid "Orders Pending Shipment"
+msgstr "Pedidos Pendientes de Envío"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__pending_delivery_orders
+msgid "Orders approved and ready for delivery"
+msgstr "Pedidos aprobados y listos para entrega"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__in_transit_orders
+msgid "Orders currently in transit"
+msgstr "Pedidos actualmente en tránsito"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__delivered_orders
+msgid "Orders delivered and paid"
+msgstr "Pedidos entregados y pagados"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__pending_approval_orders
+msgid "Orders waiting for approval"
+msgstr "Pedidos esperando aprobación"
+
+#. module: gelroy
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__other
 msgid "Other"
 msgstr "Otro"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__outstanding_amount
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__outstanding_amount
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Outstanding Amount"
+msgstr "Monto Pendiente"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+msgid "Outstanding Debts"
+msgstr "Deudas Pendientes"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+msgid "Outstanding Payments"
+msgstr "Pagos Pendientes"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__outstanding_royalties
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__outstanding_royalties
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__total_royalties_outstanding
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Outstanding Royalties"
+msgstr "Regalías Pendientes"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__stock_debt_total
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__stock_debt_total
+msgid "Outstanding S.O. Amount"
+msgstr "Monto P.S. Pendiente"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__outstanding_stock_orders
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__stock_debt_orders_count
+msgid "Outstanding Stock Orders"
+msgstr "Pedidos de Stock Pendientes"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__delivered_unpaid_orders_count
+msgid "Outstanding Stock Orders count"
+msgstr "Conteo Pedidos de Stock Pendientes"
+
+#. module: gelroy
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__state__overdue
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__state__overdue
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
 msgid "Overdue"
 msgstr "Vencido"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__overdue_payments_amount
+msgid "Overdue Amount"
+msgstr "Monto Vencido"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__overdue_payments_count
+msgid "Overdue Count"
+msgstr "Conteo Vencidos"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Overdue Orders"
+msgstr "Pedidos Vencidos"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Overdue Overview"
+msgstr "Resumen de Vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__overdue_royalty_payments_amount
+msgid "Overdue Royalties Amount"
+msgstr "Monto Regalías Vencidas"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__overdue_royalty_payments_count
+msgid "Overdue Royalties Count"
+msgstr "Conteo Regalías Vencidas"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__stock_overdue_orders_amount
+msgid "Overdue S.O. Amount"
+msgstr "Monto P.S. Vencido"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__stock_overdue_orders_count
+msgid "Overdue S.O. Count"
+msgstr "Conteo P.S. Vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__stock_overdue_orders_amount
+msgid "Overdue Stock Orders Amount"
+msgstr "Monto Pedidos de Stock Vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__stock_overdue_orders_count
+msgid "Overdue Stock Orders Count"
+msgstr "Conteo Pedidos de Stock Vencidos"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Pago completo registrado: %s"
+msgstr "Pago completo registrado: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/franchise.py:0
+#, python-format
+msgid "Pago de regalía calculado para el período %s a %s."
+msgstr "Pago de regalía calculado para el período %s a %s."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Pago de regalías confirmado."
+msgstr "Pago de regalías confirmado."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Pago marcado como vencido"
+msgstr "Pago marcado como vencido"
+
+#. module: gelroy
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_royalty_payment__state__paid
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__state__paid
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
 msgid "Paid"
 msgstr "Pagado"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__paid_amount
+msgid "Paid Amount"
+msgstr "Monto Pagado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__total_royalties_paid
+msgid "Paid Royalties"
+msgstr "Regalías Pagadas"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__payment_date
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__payment_date
 msgid "Payment Date"
 msgstr "Fecha de Pago"
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Payment Details"
+msgstr "Detalles de Pago"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__payment_due_date
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Payment Due Date"
+msgstr "Fecha de Vencimiento de Pago"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__payment_method
+msgid "Payment Method"
+msgstr "Método de Pago"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__name
+msgid "Payment Reference"
+msgstr "Referencia de Pago"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__royalty_payment_terms
+msgid "Payment Terms (Days)"
+msgstr "Términos de Pago de Regalías (Días)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__pending_approval_orders
+msgid "Pending Approval"
+msgstr "Pendiente de Aprobación"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__pending_royalty_payments
+msgid "Pending Royalty Payments"
+msgstr "Pagos de Regalías Pendientes"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__pending_delivery_orders
+msgid "Pending Shipment"
+msgstr "Pendiente de Envío"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__pending_stock_orders_count
+msgid "Pending Stock Orders"
+msgstr "Número de Pedidos de Stock Pendientes"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__total_royalties_outstanding
+msgid "Pending royalties to be paid"
+msgstr "Regalías pendientes de pago"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__royalty_collection_rate
+msgid "Percentage of collected royalties"
+msgstr "Porcentaje de regalías cobradas"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__on_time_delivery_rate
+msgid "Percentage of on-time deliveries"
+msgstr "Porcentaje de entregas a tiempo"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise__royalty_fee_percentage
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__royalty_rate
+msgid "Percentage of revenue to be paid as royalty"
+msgstr "Porcentaje de ingresos a pagar como regalía"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__performance_status
+msgid "Performance Status"
+msgstr "Estado de Rendimiento"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__performance_status
+msgid "Performance status based on collection rate"
+msgstr "Estado de rendimiento basado en la tasa de cobro"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__period_end_date
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__period_end_date
 msgid "Period End Date"
 msgstr "Fecha Fin de Periodo"
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+msgid "Period Information"
+msgstr "Información del Período"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__period_revenue
+msgid "Period Revenue"
+msgstr "Ingresos del Período"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__period_start_date
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__period_start_date
 msgid "Period Start Date"
 msgstr "Fecha Inicio de Periodo"
@@ -436,19 +2249,322 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__planning_id
+msgid "Planning"
+msgstr "Planificación"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__planning_date
+msgid "Planning Date"
+msgstr "Fecha de Planificación"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__planning_line_ids
+msgid "Planning Lines"
+msgstr "Líneas de Planificación"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__name
+msgid "Planning Reference"
+msgstr "Referencia de Planificación"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Prep time in minutes (e.g., 30)"
+msgstr "Tiempo de preparación en minutos (ej. 30)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__preparation_time
+msgid "Preparation Time (minutes)"
+msgstr "Tiempo de Preparación (minutos)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__priority
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Priority"
+msgstr "Prioridad"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_product_template
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__product_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__product_availability
+#: model:ir.model.fields,field_description:gelroy.field_product_template__product_availability
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_search_view
+msgid "Product Availability"
+msgstr "Disponibilidad de Producto"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_search_view
+msgid "Product Available"
+msgstr "Producto Disponible"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__product_capacity_text
+#: model:ir.model.fields,field_description:gelroy.field_product_template__product_capacity_text
+msgid "Product Capacity"
+msgstr "Capacidad de Producto"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_search_view
+msgid "Product Discontinued"
+msgstr "Producto Descontinuado"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_kanban_view
+msgid "Product Image"
+msgstr "Imagen de producto"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__product_lead_time
+#: model:ir.model.fields,field_description:gelroy.field_product_template__product_lead_time
+msgid "Product Lead Time (days)"
+msgstr "Plazo de entrega del producto (días)"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Product Not Available"
+msgstr "Producto no disponible"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Product Restriction"
+msgstr "Restricción de producto"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_product_product
+msgid "Product Variant"
+msgstr "Variante de producto"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_product_product__product_capacity_text
+#: model:ir.model.fields,help:gelroy.field_product_template__product_capacity_text
+msgid "Product capacity or content (e.g., '500ml', '1kg', '250g')"
+msgstr "Capacidad de producto o contenido (ej.  '500ml', '1kg', '250g')"
+
+#. module: gelroy
+#: model:ir.ui.menu,name:gelroy.menu_production_management
+msgid "Production"
+msgstr "Producción"
+
+#. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_production_planning
+#: model:ir.model,name:gelroy.model_gelroy_production_planning
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__production_planning_id
+#: model:ir.ui.menu,name:gelroy.menu_production_planning
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "Production Planning"
+msgstr "Planificación de Producción"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_gelroy_production_planning_line
+msgid "Production Planning Line"
+msgstr "Línea de Planificación de Producción"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__recipe_production_size
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__production_size
+msgid "Production Size"
+msgstr "Tamaño de Producción"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Production planning completed - all stock orders delivered."
+msgstr "Planificación de Producción completada - todos los pedidos de stock han sido entregados."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Production planning confirmed."
+msgstr "Planificación de Producción confirmada."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Production planning manually marked as completed."
+msgstr "Planificación de Producción marcado manualmente como completado."
+
+#. module: gelroy
+#: model:ir.ui.menu,name:gelroy.menu_franchise_products
+msgid "Products"
+msgstr "Productos"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_kanban_view
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_tree_view
+msgid "Products with Franchise Settings"
+msgstr "Productos con Opciones de Franquicia"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__quantity
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_product_product__franchise_qty_multiple
+#: model:ir.model.fields,field_description:gelroy.field_product_template__franchise_qty_multiple
+msgid "Quantity Multiple"
+msgstr "Múltiplo de cantidad"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/product_extension.py:0
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "Quantity for %s must be in multiples of %s"
+msgstr "Cantidad para %s debe ser en múltiplos de %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/product_extension.py:0
+#, python-format
+msgid "Quantity multiple must be greater than zero."
+msgstr "Múltiplo de Cantidad debe ser mayor a cero."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/recipe.py:0
+#, python-format
+msgid "Quantity must be greater than zero."
+msgstr "Cantidad debe ser mayor a cero."
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__rating_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__rating_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__rating_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__rating_ids
 msgid "Ratings"
 msgstr "Calificaciones"
 
 #. module: gelroy
+#: model:ir.model,name:gelroy.model_gelroy_recipe
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__recipe_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__recipe_id
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Recipe"
+msgstr "Receta"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__code
+msgid "Recipe Code"
+msgstr "Código de Receta"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Recipe Code (e.g., HB-001, PD-002)"
+msgstr "Código de Receta (ej. HB-001, PD-002)"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_gelroy_recipe_ingredient
+msgid "Recipe Ingredient"
+msgstr "Ingrediente de Receta"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__name
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Recipe Name"
+msgstr "Nombre de Receta"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "Recipe Planning"
+msgstr "Planificación de resetas"
+
+#. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_recipe
+#: model:ir.ui.menu,name:gelroy.menu_recipe
+msgid "Recipes"
+msgstr "Recetas"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+msgid "Register Payment"
+msgstr "Registrar Pago"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_account_bank_statement_line__franchise_id
+#: model:ir.model.fields,field_description:gelroy.field_account_move__franchise_id
+#: model:ir.model.fields,field_description:gelroy.field_account_payment__franchise_id
+msgid "Related Franchise"
+msgstr "Franquicia Asociada"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_account_bank_statement_line__royalty_payment_id
+#: model:ir.model.fields,field_description:gelroy.field_account_move__royalty_payment_id
+#: model:ir.model.fields,field_description:gelroy.field_account_payment__royalty_payment_id
+msgid "Related Royalty Payment"
+msgstr "Pago de Regalía Asociado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_account_bank_statement_line__stock_order_id
+#: model:ir.model.fields,field_description:gelroy.field_account_move__stock_order_id
+#: model:ir.model.fields,field_description:gelroy.field_account_payment__stock_order_id
+msgid "Related Stock Order"
+msgstr "Pedido de Stock Asociado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__requested_delivery_date
+msgid "Requested Delivery Date"
+msgstr "Fecha de Entrega Solicitada"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Reset to Draft"
+msgstr "Restablecer a Borrador"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__activity_user_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__activity_user_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__activity_user_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__activity_user_id
 msgid "Responsible User"
 msgstr "Usuario Responsable"
 
 #. module: gelroy
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__restaurant
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__available_franchise_types__restaurant
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__available_franchise_types__restaurant
 msgid "Restaurant"
 msgstr "Restaurante"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__coffee_shop
+msgid "Coffee Shop"
+msgstr "Cafetería"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__ice_cream_parlor
+msgid "Ice Cream Parlor"
+msgstr "Heladería"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__fast_food
+msgid "Fast Food"
+msgstr "Comida Rápida"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__pizzeria
+msgid "Pizzeria"
+msgstr "Pizzería"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__bakery_pastry
+msgid "Bakery / Pastry Shop"
+msgstr "Panadería / Pastelería"
 
 #. module: gelroy
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__retail
@@ -456,16 +2572,62 @@ msgid "Retail"
 msgstr "Minorista"
 
 #. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__available_franchise_types__retail
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__available_franchise_types__retail
+msgid "Retail Store"
+msgstr "Tienda Minorista"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Royalties Financial Health"
+msgstr "Salud Financiera de Regalías"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Royalties Overview"
+msgstr "Resumen de Regalías"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__royalty_calculation_day
+msgid "Royalty Calculation Day"
+msgstr "Día de Cálculo de Regalías"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__royalty_collection_rate
+msgid "Royalty Collection Rate"
+msgstr "Tasa de Cobro de Regalías"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__royalty_fee_percentage
-msgid "Royalty Fee (%)"
+msgid "Royalty Fee %"
 msgstr "Tasa de Regalía (%)"
 
 #. module: gelroy
 #. odoo-python
-#: code:addons/gelroy/models/models.py:0 code:addons/gelroy/models/models.py:0
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__royalty_payment_ids
-#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+#: code:addons/gelroy/models/royalty_payment.py:0
 #, python-format
+msgid "Royalty Invoice"
+msgstr "Factura de Regalías"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Royalty Invoices"
+msgstr "Facturas de Regalías"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+msgid "Royalty Payment"
+msgstr "Pago de Regalía"
+
+#. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.action_royalty_payments
+#: model:ir.actions.act_window,name:gelroy.royalty_payment_action
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__royalty_payment_ids
+#: model:ir.ui.menu,name:gelroy.menu_royalty_payments
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_tree_view
 msgid "Royalty Payments"
 msgstr "Pagos de Regalías"
 
@@ -480,21 +2642,114 @@ msgid "Royalty Rate (%)"
 msgstr "Tasa de Regalía (%)"
 
 #. module: gelroy
-#. odoo-python
-#: code:addons/gelroy/models/models.py:0 code:addons/gelroy/models/models.py:0
-#, python-format
-msgid "Royalty payment calculated for period %s to %s."
-msgstr "Pago de regalía calculado para el periodo %s a %s."
+#: model:ir.model.fields,help:gelroy.field_account_bank_statement_line__royalty_payment_id
+#: model:ir.model.fields,help:gelroy.field_account_move__royalty_payment_id
+#: model:ir.model.fields,help:gelroy.field_account_payment__royalty_payment_id
+msgid "Royalty payment that generated this invoice"
+msgstr "Pago de regalía que generó esta factura"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__message_has_sms_error
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__message_has_sms_error
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__message_has_sms_error
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "Error de Entrega de SMS"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_form_view
+msgid "Sale Price"
+msgstr "Precio de Venta"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+msgid "Search Royalty Payments"
+msgstr "Buscar Pagos de Regalías"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Search Stock Orders"
+msgstr "Buscar Pedidos de Stock"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Search and select ingredient..."
+msgstr "Buscar y seleccionar ingrediente..."
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_product_product__available_franchise_types
+msgid "Select franchise types that can order this product"
+msgstr "Seleccione los tipos de franquicia que pueden pedir este producto"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Select unit..."
+msgstr "Seleccionar unidad..."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__sequence
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__sequence
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__sequence
+msgid "Sequence"
+msgstr "Secuencia"
 
 #. module: gelroy
 #: model:ir.model.fields.selection,name:gelroy.selection__gelroy_franchise__franchise_type__service
 msgid "Service"
 msgstr "Servicio"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__product_product__available_franchise_types__service
+#: model:ir.model.fields.selection,name:gelroy.selection__product_template__available_franchise_types__service
+msgid "Service Center"
+msgstr "Centro de Servicio"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "Set to Draft"
+msgstr "Establecer como Borrador"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__shipped_date
+msgid "Shipped Date"
+msgstr "Fecha de Envío"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Only confirmed payments can be marked as overdue."
+msgstr "Solo se puede marcar como vencido pagos confirmados."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Only calculated payments can be confirmed."
+msgstr "Solo se pueden confirmar pagos calculados."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "Only confirmed or overdue payments can be registered."
+msgstr "Solo se pueden registrar pagos confirmados o vencidos."
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_product_product__available_franchise_ids
+#: model:ir.model.fields,help:gelroy.field_product_template__available_franchise_ids
+msgid "Specific franchises that can order this product. Leave empty for all franchises."
+msgstr "Franquicias específicas que pueden pedir este producto. Dejar vacío para todas las franquicias."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Start Transit"
+msgstr "Iniciar Tránsito"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__date_from
+msgid "Start date for filtering"
+msgstr "Fecha de inicio para filtrar"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__state_id
@@ -503,12 +2758,19 @@ msgid "State"
 msgstr "Provincia/Estado"
 
 #. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__state
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__state
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__state
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
 msgid "Status"
 msgstr "Estado"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__activity_state
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__activity_state
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__activity_state
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__activity_state
 msgid ""
 "Status based on activities\n"
 "Overdue: Due date is already passed\n"
@@ -521,14 +2783,81 @@ msgstr ""
 "Planeado: Actividades futuras."
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Stock Operations"
+msgstr "Operaciones de Stock"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__order_id
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+#, python-format
+msgid "Stock Order"
+msgstr "Pedido de Stock"
+
+#. module: gelroy
+#: model:ir.model,name:gelroy.model_gelroy_stock_order_line
+msgid "Stock Order Line"
+msgstr "Línea de Pedido de Stock"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Stock Order Status"
+msgstr "Estado Pedido de Stock"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_production_planning__state__stock_ordered
+msgid "Stock Ordered"
+msgstr "Stock Pedido"
+
+#. module: gelroy
+#: model:ir.actions.act_window,name:gelroy.stock_order_action
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__stock_order_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__stock_order_count
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__stock_order_ids
+#: model:ir.ui.menu,name:gelroy.menu_stock_orders
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_tree_view
+msgid "Stock Orders"
+msgstr "Pedidos de Stock"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__stock_order_count
+msgid "Stock Orders Count"
+msgstr "Número de Pedidos de Stock"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "Stock Orders Overview"
+msgstr "Resumen Pedidos de Stock"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Stock order already exists for this planning."
+msgstr "Ya existe un pedido de stock para esta planificación."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/production.py:0
+#, python-format
+msgid "Stock order created: %s"
+msgstr "Pedido de stock creado: %s"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_account_bank_statement_line__stock_order_id
+#: model:ir.model.fields,help:gelroy.field_account_move__stock_order_id
+#: model:ir.model.fields,help:gelroy.field_account_payment__stock_order_id
+msgid "Stock order that generated this invoice"
+msgstr "Pedido de stock que generó esta factura"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__street
 msgid "Street"
 msgstr "Calle"
-
-#. module: gelroy
-#: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
-msgid "Street 2..."
-msgstr "Calle 2..."
 
 #. module: gelroy
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
@@ -536,15 +2865,181 @@ msgid "Street..."
 msgstr "Calle..."
 
 #. module: gelroy
-#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__street2
-msgid "Street2"
-msgstr "Calle 2"
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Submit Order"
+msgstr "Enviar Pedido"
 
 #. module: gelroy
-#: model:ir.model.fields,help:gelroy.field_gelroy_franchise__currency_id
-#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__currency_id
-msgid "The currency for financial fields related to this franchise."
-msgstr "La moneda para los campos financieros relacionados con esta franquicia."
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__state__submitted
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Submitted"
+msgstr "Enviado"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__amount_untaxed
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__price_subtotal
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__price_tax
+msgid "Tax Amount"
+msgstr "Impuestos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__amount_tax
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "The requested delivery date cannot be earlier than the order date."
+msgstr "La fecha de entrega solicitada no puede ser anterior a la fecha del pedido."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_search_view
+msgid "This Month"
+msgstr "Este Mes"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order_line.py:0
+#, python-format
+msgid "This product is not available for the selected franchise."
+msgstr "Este producto no está disponible para la franquicia seleccionada."
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "This production planning has been cancelled."
+msgstr "Esta planificación de producción ha sido cancelada."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__date_to
+msgid "To Date"
+msgstr "Hasta Fecha"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__price_total
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "Total"
+msgstr "Total"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__total_amount
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_tree_view
+msgid "Total Amount"
+msgstr "Monto Total"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__total_cost
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__total_cost
+msgid "Total Cost"
+msgstr "Coste Total"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__total_outstanding_debt
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_tree_view
+msgid "Total Debt"
+msgstr "Deuda Total Pendiente"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__total_items
+msgid "Total Items"
+msgstr "Total de Artículos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__total_overdue_amount
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__total_overdue_amount
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Total Overdue Amount"
+msgstr "Monto Total Vencido"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__total_overdue_count
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__total_overdue_count
+msgid "Total Overdue Count"
+msgstr "Cantidad Total Vencida"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Total Overdue Items"
+msgstr "Artículos Totales Vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__total_recipes
+msgid "Total Recipes"
+msgstr "Total Recetas"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__total_royalties_calculated
+msgid "Total Royalties Calculated"
+msgstr "Total de Regalías Calculadas"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__total_royalties_due
+msgid "Total Royalties Due"
+msgstr "Total de Regalías Adeudadas"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_executive_dashboard__total_royalties_paid
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__total_royalties_paid
+msgid "Total Royalties Paid"
+msgstr "Total de Regalías Pagadas"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__total_stock_orders_value
+msgid "Total S.O. Amount"
+msgstr "Monto Total P.S."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise_dashboard__total_stock_orders_count
+msgid "Total S.O. Count"
+msgstr "Conteo Total P.S."
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__total_time
+msgid "Total Time"
+msgstr "Tiempo Total"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__stock_overdue_orders_amount
+msgid "Total amount of overdue stock orders"
+msgstr "Monto total de pedidos de stock vencidos"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__stock_debt_total
+msgid "Total debt from delivered but unpaid orders"
+msgstr "Deuda total de pedidos entregados pero no pagados"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__total_stock_orders_count
+msgid "Total number of stock orders"
+msgstr "Número total de pedidos de stock"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__total_productions
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning_line__total_productions
+msgid "Total productions"
+msgstr "Producciones Totales"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__total_royalties_calculated
+msgid "Total royalties calculated in the period"
+msgstr "Regalías totales calculadas en el periodo"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__total_royalties_paid
+msgid "Total royalties paid in the period"
+msgstr "Regalías totales pagadas en el periodo"
+
+#. module: gelroy
+#: model:ir.model.fields,help:gelroy.field_gelroy_franchise_dashboard__total_stock_orders_value
+msgid "Total value of stock orders"
+msgstr "Valor total de los pedidos de stock"
 
 #. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__franchise_type
@@ -559,18 +3054,91 @@ msgstr "Tipo de Franquicia"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__activity_exception_decoration
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__activity_exception_decoration
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__activity_exception_decoration
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__activity_exception_decoration
 msgid "Type of the exception activity on record."
 msgstr "Tipo de la actividad de excepción en el registro."
 
 #. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "Unit (e.g., units, kg, pieces, loaves)"
+msgstr "Unidad (por ejemplo, unidades, kg, piezas, panes)"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__unit_price
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__unit_price
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+#. module: gelroy
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe__unit_of_measure
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_recipe_ingredient__product_uom_id
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order_line__product_uom_id
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_search_view
+msgid "Unit of Measure"
+msgstr "Unidad de Medida"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "Unpaid Stock Orders"
+msgstr "Pedidos de Stock Impagos"
+
+#. module: gelroy
+#: model:ir.model.fields.selection,name:gelroy.selection__gelroy_stock_order__priority__urgent
+msgid "Urgent"
+msgstr "Urgente"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_search_view
+msgid "Urgent Priority"
+msgstr "Prioridad Urgente"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "View Invoices"
+msgstr "Ver Facturas"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.production_planning_form_view
+msgid "View Stock Orders"
+msgstr "Ver Pedidos de Stock"
+
+#. module: gelroy
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__website_message_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_production_planning__website_message_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_royalty_payment__website_message_ids
+#: model:ir.model.fields,field_description:gelroy.field_gelroy_stock_order__website_message_ids
 msgid "Website Messages"
 msgstr "Mensajes del Sitio Web"
 
 #. module: gelroy
 #: model:ir.model.fields,help:gelroy.field_gelroy_franchise__website_message_ids
+#: model:ir.model.fields,help:gelroy.field_gelroy_production_planning__website_message_ids
+#: model:ir.model.fields,help:gelroy.field_gelroy_royalty_payment__website_message_ids
+#: model:ir.model.fields,help:gelroy.field_gelroy_stock_order__website_message_ids
 msgid "Website communication history"
 msgstr "Historial de comunicación del sitio web"
+
+#. module: gelroy
+#: model_terms:ir.actions.act_window,help:gelroy.action_franchise_dashboard
+msgid "Welcome to the Franchise Dashboard!"
+msgstr "¡Bienvenido al Panel de Franquicias!"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "A royalty calculation already exists for %s in period %s. Only one calculation per month per franchise is allowed."
+msgstr "Ya existe un cálculo de regalías para %s en el período %s. Solo se permite un cálculo por mes por franquicia."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/royalty_payment.py:0
+#, python-format
+msgid "A royalty calculation already exists for this franchise in %s. Only one . calculation per month is allowed."
+msgstr "Ya existe un cálculo de regalías para esta franquicia en %s. Solo se permite un cálculo por mes."
 
 #. module: gelroy
 #: model_terms:ir.ui.view,arch_db:gelroy.franchise_form_view
@@ -581,3 +3149,123 @@ msgstr "Código Postal"
 #: model:ir.model.fields,field_description:gelroy.field_gelroy_franchise__zip
 msgid "Zip"
 msgstr "Código Postal"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.royalty_payment_form_view
+#: model_terms:ir.ui.view,arch_db:gelroy.stock_order_form_view
+msgid "days overdue"
+msgstr "días vencido"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/recipe.py:0
+#, python-format
+msgid "production size must be greater than zero."
+msgstr "el tamaño de producción debe ser mayor que cero."
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "• %s (%s): Requested %s, Available %s (Missing %s)\n"
+msgstr "• %s (%s): Solicitado %s, Disponible %s (Faltan %s)\n"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "• %s: Requested %s, Available %s (Missing %s)\n"
+msgstr "• %s: Solicitado %s, Disponible %s (Faltan %s)\n"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/stock_order.py:0
+#, python-format
+msgid "• %s: Requires %s days, only %s days available\n"
+msgstr "• %s: Requiere %s días, solo %s días disponibles\n"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "🌐 Network Executive Dashboard"
+msgstr "🌐 Panel Ejecutivo de Red"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "🌐 Network Overview"
+msgstr "🌐 Resumen de Red"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "🎯 Analysis Summary"
+msgstr "🎯 Resumen de Análisis"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_form_view
+msgid "🏪 Franchise Availability"
+msgstr "🏪 Disponibilidad para Franquicia"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_form_view
+msgid "💰 Pricing"
+msgstr "💰 Precios"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "💰 Royalties Analysis"
+msgstr "💰 Análisis de Regalías"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/invoice.py:0
+#, python-format
+msgid "📄 Factura generada: %s"
+msgstr "📄 Factura generada: %s"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_executive_dashboard_view
+msgid "📊 Executive Summary"
+msgstr "📊 Resumen Ejecutivo"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_form_view
+msgid "📋 Configuration"
+msgstr "📋 Configuración"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "📝 Recipe Notes and Instructions"
+msgstr "📝 Notas e Instrucciones de la Receta"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "📦 Orders Analysis"
+msgstr "📦 Análisis de Pedidos"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.product_template_franchise_form_view
+msgid "📦 Quantity Restrictions"
+msgstr "📦 Restricciones de Cantidad"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/invoice.py:0
+#, python-format
+msgid "🔄 Estado revertido a '%s' por cancelación de pago en factura: %s"
+msgstr "🔄 Estado revertido a '%s' por cancelación de pago en factura: %s"
+
+#. module: gelroy
+#. odoo-python
+#: code:addons/gelroy/models/invoice.py:0
+#, python-format
+msgid "🔄 Estado revertido por cancelación de pago en factura: %s"
+msgstr "🔄 Estado revertido por cancelación de pago en factura: %s"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.franchise_operational_dashboard_view
+msgid "🚚 Operations Analysis"
+msgstr "🚚 Análisis de Operaciones"
+
+#. module: gelroy
+#: model_terms:ir.ui.view,arch_db:gelroy.recipe_form_view
+msgid "🧄 Ingredients"
+msgstr "🧄 Ingredientes"

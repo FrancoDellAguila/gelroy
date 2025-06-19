@@ -1,0 +1,229 @@
+<odoo>
+    <data>
+        <!-- Royalty Payment Tree View -->
+        <record id="royalty_payment_tree_view" model="ir.ui.view">
+            <field name="name">royalty.payment.tree</field>
+            <field name="model">gelroy.royalty.payment</field>
+            <field name="arch" type="xml">
+                <tree string="Royalty Payments" 
+                      decoration-bf="state in ('confirmed', 'paid')"
+                      decoration-info="state == 'draft'" 
+                      decoration-warning="state == 'calculated'" 
+                      decoration-success="state == 'paid'"
+                      decoration-danger="state == 'overdue'"
+                      decoration-muted="state == 'cancelled'">
+                    <field name="name"/>
+                    <field name="franchise_id"/>
+                    <field name="franchisee_id"/>
+                    <field name="period_start_date"/>
+                    <field name="period_end_date"/>
+                    <field name="period_revenue" widget="monetary"/>
+                    <field name="calculated_amount" widget="monetary"/>
+                    <field name="payment_due_date"/>
+                    <field name="invoice_count" string="Invoices"/>
+                    <field name="state" widget="badge" 
+                           decoration-success="state == 'paid'"
+                           decoration-warning="state == 'calculated'"
+                           decoration-info="state == 'draft'"
+                           decoration-muted="state == 'cancelled'"
+                           decoration-danger="state == 'overdue'"
+                           decoration-primary="state == 'confirmed'"/>
+                    <field name="currency_id" column_invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Royalty Payment Form View -->
+        <record id="royalty_payment_form_view" model="ir.ui.view">
+            <field name="name">royalty.payment.form</field>
+            <field name="model">gelroy.royalty.payment</field>
+            <field name="arch" type="xml">
+                <form string="Royalty Payment">
+                    <style>
+                        /* Campos normales */
+                        .royalty_payment_bordered input,
+                        .royalty_payment_bordered textarea,
+                        .royalty_payment_bordered select {
+                            border: 1px solid #888 !important;
+                            border-radius: 4px;
+                            background: #fff !important;
+                        }
+                        
+                        /* Campos monetarios */
+                        .royalty_payment_bordered .o_field_monetary input {
+                            border: 1px solid #28a745 !important;
+                            border-radius: 4px;
+                            background: #f8fff9 !important;
+                        }
+                        
+                        /* Campos de fecha */
+                        .royalty_payment_bordered .o_field_date input,
+                        .royalty_payment_bordered .o_field_datetime input {
+                            border: 1px solid #d33000 !important;
+                            border-radius: 4px;
+                            background: #f8f9ff !important;
+                        }
+                        
+                        /* Campos readonly */
+                        .royalty_payment_bordered input[readonly],
+                        .royalty_payment_bordered textarea[readonly] {
+                            border: 1px solid #ccc !important;
+                            background: #f5f5f5 !important;
+                            color: #666 !important;
+                        }
+                    </style>
+                    <header>
+                        <button name="action_calculate" type="object" string="Calculate Royalty" 
+                                invisible="state != 'draft'" class="oe_highlight"/>
+                        <button name="action_confirm" type="object" string="Confirm" 
+                                invisible="state != 'calculated'" class="oe_highlight"/>
+                        <button name="action_register_payment" type="object" string="Register Payment" 
+                                invisible="state not in ['confirmed', 'overdue']" class="oe_highlight"/>
+                        
+                        <!-- Botones de facturación -->
+                        <button name="action_create_invoice" type="object" string="Create Invoice" 
+                                class="btn-primary"
+                                invisible="state not in ['confirmed', 'overdue', 'paid'] or invoice_count > 0"/>
+                        <button name="action_view_invoices" type="object" string="View Invoices" 
+                                class="btn-secondary"
+                                invisible="invoice_count == 0"/>
+                        
+                        <button name="action_cancel" type="object" string="Cancel" 
+                                invisible="state in ('paid', 'cancelled')"/>
+                        <button name="action_reset_to_draft" type="object" string="Reset to Draft" 
+                                invisible="state != 'cancelled'"/>
+                        
+                        <!-- Statusbar normal (flujo feliz) -->
+                        <field name="state" widget="statusbar" statusbar_visible="draft,calculated,confirmed,paid"/>
+                        
+                        <!-- Badge rojo para overdue -->
+                        <div class="alert alert-danger" role="alert" invisible="state != 'overdue'">
+                            <strong>⚠️ OVERDUE:</strong> This payment is <field name="days_overdue"/> days overdue
+                        </div>
+                    </header>
+                    
+                    <sheet class="royalty_payment_bordered">
+                        <!-- Botón estadístico para facturas -->
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_invoices" type="object" 
+                                    class="oe_stat_button" icon="fa-pencil-square-o"
+                                    invisible="invoice_count == 0">
+                                <field name="invoice_count" widget="statinfo" string="Invoices"/>
+                            </button>
+                        </div>
+                        
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        
+                        <group>
+                            <group>
+                                <field name="franchise_id" required="1" 
+                                       readonly="state in ['confirmed', 'paid', 'overdue']"/>
+                                <field name="franchisee_id" readonly="1"/>
+                                <field name="currency_id" string="Currency" 
+                                       readonly="state in ['confirmed', 'paid', 'overdue']"/>
+                                <field name="royalty_rate" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="calculation_date" 
+                                       readonly="state in ['confirmed', 'paid', 'overdue']"/>
+                                <field name="payment_due_date" 
+                                       readonly="state in ['paid']"/>
+                                <field name="payment_date" readonly="state not in ['confirmed', 'overdue']"/>
+                                <field name="invoice_count" invisible="1"/>
+                            </group>
+                        </group>
+                        
+                        <group string="Period Information">
+                            <group>
+                                <field name="period_start_date" 
+                                       readonly="state in ['confirmed', 'paid', 'overdue']"/>
+                                <field name="period_end_date" 
+                                       readonly="state in ['confirmed', 'paid', 'overdue']"/>
+                            </group>
+                            <group>
+                                <field name="period_revenue" widget="monetary" 
+                                       readonly="state in ['confirmed', 'paid', 'overdue']"/>
+                            </group>
+                        </group>
+                        
+                        <group string="Financial Summary">
+                            <group>
+                                <field name="calculated_amount" readonly="1" widget="monetary"/>
+                                <field name="paid_amount" readonly="1" widget="monetary"/>  
+                            </group>
+                            <group>
+                                <field name="outstanding_amount" readonly="1" widget="monetary"/>
+                                <field name="days_overdue" readonly="1" invisible="state != 'overdue'"/>
+                            </group>
+                        </group>
+                        
+                        <notebook>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Royalty Payment Search View -->
+        <record id="royalty_payment_search_view" model="ir.ui.view">
+            <field name="name">royalty.payment.search</field>
+            <field name="model">gelroy.royalty.payment</field>
+            <field name="arch" type="xml">
+                <search string="Search Royalty Payments">
+                    <field name="name"/>
+                    <field name="franchise_id"/>
+                    <field name="franchisee_id"/>
+                    <field name="state"/>
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Calculated" name="calculated" domain="[('state', '=', 'calculated')]"/>
+                    <filter string="Confirmed" name="confirmed" domain="[('state', '=', 'confirmed')]"/>
+                    <filter string="Paid" name="paid" domain="[('state', '=', 'paid')]"/>
+                    <filter string="Cancelled" name="cancelled" domain="[('state', '=', 'cancelled')]"/>
+                    <filter string="Outstanding Payments" name="outstanding" domain="[('outstanding_amount', '>', 0)]"/>
+                    <filter string="Overdue" name="overdue" domain="[('state', '=', 'overdue')]"/>
+                    <separator/>
+                    <filter string="This Month" name="current_month" 
+                            domain="[('period_end_date', '>=', (context_today() - relativedelta(day=1)).strftime('%Y-%m-%d')),
+                                     ('period_end_date', '&lt;', (context_today() + relativedelta(months=1, day=1)).strftime('%Y-%m-%d'))]"/>
+                    <filter string="Last Month" name="last_month" 
+                            domain="[('period_end_date', '>=', (context_today() - relativedelta(months=1, day=1)).strftime('%Y-%m-%d')),
+                                     ('period_end_date', '&lt;', (context_today() - relativedelta(day=1)).strftime('%Y-%m-%d'))]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Franchise" name="group_by_franchise" context="{'group_by': 'franchise_id'}"/>
+                        <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
+                        <filter string="Due Date Month" name="group_by_due_date" context="{'group_by': 'payment_due_date:month'}"/>
+                        <filter string="Currency" name="group_by_currency" context="{'group_by': 'currency_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Acción principal -->
+        <record id="action_royalty_payments" model="ir.actions.act_window">
+            <field name="name">Royalty Payments</field>
+            <field name="res_model">gelroy.royalty.payment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first royalty payment
+                </p>
+                <p>
+                    Manage franchise royalty payments and generate invoices automatically.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

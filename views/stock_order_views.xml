@@ -1,0 +1,297 @@
+<odoo>
+    <data>
+        <!-- Stock Order Tree View -->
+        <record id="stock_order_tree_view" model="ir.ui.view">
+            <field name="name">stock.order.tree</field>
+            <field name="model">gelroy.stock.order</field>
+            <field name="arch" type="xml">
+                <tree string="Stock Orders" 
+                      decoration-bf="priority == 'emergency'"
+                      decoration-it="priority == 'urgent'"
+                      decoration-muted="state == ('cancelled', 'draft')"
+                      decoration-success="state == 'paid'"
+                      decoration-warning="state in ('submitted', 'approved')"
+                      decoration-info="state in ('in_transit', 'delivered')"
+                      decoration-danger="state == 'overdue'">  
+                    <field name="name"/>
+                    <field name="franchise_id"/>
+                    <field name="order_date"/>
+                    <field name="requested_delivery_date"/>
+                    <field name="delivered_date" optional="show"/>
+                    <field name="payment_due_date"/>
+                    <field name="outstanding_amount" optional="hide" widget="monetary" 
+                           decoration-warning="outstanding_amount > 0"/>
+                    <field name="total_items"/>
+                    <field name="total_amount" widget="monetary" sum="Total Amount" 
+                           decoration-danger="total_amount > 5000" 
+                           decoration-warning="total_amount > 2000"/>
+                    <field name="currency_id" column_invisible="1"/>
+                    <field name="priority" widget="badge"
+                           decoration-success="priority == 'normal'" 
+                           decoration-warning="priority == 'urgent'" 
+                           decoration-danger="priority == 'emergency'"/>
+                    <field name="state" widget="badge"
+                           decoration-info="state == 'draft'" 
+                           decoration-warning="state == 'submitted'" 
+                           decoration-primary="state == 'approved'"
+                           decoration-it="state == 'in_transit'"
+                           decoration-bf="state == 'delivered'"
+                           decoration-danger="state == 'overdue'"
+                           decoration-success="state == 'paid'"
+                           decoration-muted="state == 'cancelled'"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Stock Order Search View -->
+        <record id="stock_order_search_view" model="ir.ui.view">
+            <field name="name">stock.order.search</field>
+            <field name="model">gelroy.stock.order</field>
+            <field name="arch" type="xml">
+                <search string="Search Stock Orders">
+                    <field name="name"/>
+                    <field name="franchise_id"/>
+                    <field name="franchisee_id"/>
+                    <field name="state"/>
+                    <field name="payment_due_date"/>  
+                    
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Submitted" name="submitted" domain="[('state', '=', 'submitted')]"/>
+                    <filter string="Approved" name="approved" domain="[('state', '=', 'approved')]"/>
+                    <filter string="In Transit" name="in_transit" domain="[('state', '=', 'in_transit')]"/>
+                    <filter string="Delivered" name="delivered" domain="[('state', '=', 'delivered')]"/>
+                    <filter string="Overdue" name="overdue" domain="[('state', '=', 'overdue')]"/>
+                    <filter string="Paid" name="paid" domain="[('state', '=', 'paid')]"/>
+                    
+                    <separator/>
+                    <filter string="Due Today" name="due_today" 
+                            domain="[('payment_due_date', '=', context_today())]"/>
+                    <filter string="Overdue Orders" name="filter_overdue" 
+                            domain="[('days_overdue', '&gt;', 0)]"/>
+                    <filter string="Has Due Date" name="has_due_date" 
+                            domain="[('payment_due_date', '!=', False)]"/>
+                    <filter string="Outstanding Amount" name="has_outstanding" 
+                            domain="[('outstanding_amount', '&gt;', 0)]"/>
+                    
+                    <filter string="Urgent Priority" name="urgent" domain="[('priority', '=', 'urgent')]"/>
+                    
+                    <group expand="0" string="Group By">
+                        <filter string="Franchise" name="group_by_franchise" context="{'group_by': 'franchise_id'}"/>
+                        <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
+                        <filter string="Priority" name="group_by_priority" context="{'group_by': 'priority'}"/>
+                        <filter string="Order Date" name="group_by_date" context="{'group_by': 'order_date'}"/>
+                        <filter string="Payment Due Date" name="group_by_due_date" context="{'group_by': 'payment_due_date'}"/>
+                        <filter string="Currency" name="group_by_currency" context="{'group_by': 'currency_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Stock Order Form View -->
+        <record id="stock_order_form_view" model="ir.ui.view">
+            <field name="name">stock.order.form</field>
+            <field name="model">gelroy.stock.order</field>
+            <field name="arch" type="xml">
+                <form string="Stock Order">
+                    <style>
+                        /* Campos normales */
+                        .stock_order_bordered input,
+                        .stock_order_bordered textarea,
+                        .stock_order_bordered .o_input,
+                        .stock_order_bordered select {
+                            border: 1px solid #888 !important;
+                            border-radius: 4px;
+                            background: #fff !important;
+                        }
+                        
+                        /* Campos monetarios */
+                        .stock_order_bordered .o_field_monetary input {
+                            border: 1px solid #28a745 !important;
+                            border-radius: 4px;
+                            background: #f8fff9 !important;
+                        }
+                        
+                        /* Campos de fecha */
+                        .stock_order_bordered .o_field_date input,
+                        .stock_order_bordered .o_field_datetime input {
+                            border: 1px solid #d33000 !important;
+                            border-radius: 4px;
+                            background: #f8f9ff !important;
+                        }
+                        
+                        /* Campos readonly */
+                        .stock_order_bordered input[readonly],
+                        .stock_order_bordered textarea[readonly],
+                        .stock_order_bordered .o_field_widget[readonly] input {
+                            border: 1px solid #ccc !important;
+                            background: #f5f5f5 !important;
+                            color: #666 !important;
+                        }
+                    </style>
+                    <header>
+                        <button name="action_submit" type="object" string="Submit Order" 
+                                invisible="state != 'draft'" class="oe_highlight"/>
+                        <button name="action_approve" type="object" string="Approve" 
+                                invisible="state != 'submitted'" class="oe_highlight"/>
+                        <button name="action_start_transit" type="object" string="Start Transit" 
+                                invisible="state != 'approved'"/>
+                        <button name="action_deliver" type="object" string="Mark as Delivered" 
+                                invisible="state != 'in_transit'" class="oe_highlight"/>
+                        <button name="action_mark_paid" type="object" string="Mark as Paid" 
+                                invisible="state not in ['delivered', 'overdue']" 
+                                class="oe_highlight"/>
+                        
+                        <!-- Botones de facturación -->
+                        <button name="action_create_invoice" type="object" string="Create Invoice" 
+                                class="btn-primary"
+                                invisible="state not in ['delivered', 'in_transit', 'overdue', 'paid']"/>
+                        <button name="action_view_invoices" type="object" string="View Invoices" 
+                                class="btn-secondary"
+                                invisible="invoice_count == 0"/>
+                        
+                        <button name="action_cancel" type="object" string="Cancel" 
+                                invisible="state not in ('draft', 'submitted', 'approved', 'in_transit')"/>
+                        <button name="action_reset_to_draft" type="object" string="Reset to Draft" 
+                                invisible="state != 'cancelled'"/>
+                        
+                        <field name="state" widget="statusbar" statusbar_visible="draft,submitted,approved,in_transit,delivered,paid"/>
+                        
+                        <!-- Mensajes de alerta  -->
+                        <div class="alert alert-danger" role="alert" invisible="state != 'overdue'">
+                            <strong>OVERDUE:</strong> This order is <field name="days_overdue"/> days overdue
+                        </div>
+
+                        <div class="alert alert-info" role="alert" invisible="state != 'delivered'">
+                            <strong>DELIVERED:</strong> Payment is pending
+                        </div>
+
+                    </header>
+                    <sheet class="stock_order_bordered">
+                        <!-- botón estadístico para facturas -->
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_invoices" type="object" 
+                                    class="oe_stat_button" icon="fa-pencil-square-o"
+                                    invisible="invoice_count == 0">
+                                <field name="invoice_count" widget="statinfo" string="Invoices"/>
+                            </button>
+                        </div>
+                        
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="franchise_id" required="1" 
+                                       readonly="state in ['approved', 'in_transit', 'delivered', 'overdue', 'paid']"/>
+                                <field name="franchisee_id" readonly="1"/>
+                                <field name="order_date" 
+                                       readonly="state in ['approved', 'in_transit', 'delivered', 'overdue', 'paid']"/>
+                                <field name="requested_delivery_date" 
+                                       readonly="state in ['approved', 'in_transit', 'delivered', 'overdue', 'paid']"/>
+                                <field name="payment_due_date"/>
+                            </group>
+                            <group>
+                                <field name="priority" 
+                                       readonly="state in ['approved', 'in_transit', 'delivered', 'overdue', 'paid']"/>
+                                <field name="currency_id" string="Currency"/>
+                                <field name="total_items" readonly="1"/>
+                                <field name="total_amount" readonly="1" widget="monetary"/>
+                                <field name="days_overdue" invisible="1"/>
+                                <field name="invoice_count" invisible="1"/>
+                            </group>
+                        </group>
+                        
+                        <notebook>
+                            <page string="Order Lines">
+                                <field name="order_line_ids" context="{'default_order_id': active_id}">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="product_id" 
+                                               readonly="parent.state in ['approved', 'in_transit', 'delivered', 'overdue', 'paid']"/>
+                                        <field name="quantity" 
+                                               readonly="parent.state in ['approved', 'in_transit', 'delivered', 'overdue', 'paid']"/>
+                                        <field name="product_uom_id" readonly="1"/>
+                                        <field name="unit_price" widget="monetary" readonly="1"/>
+                                        <field name="price_subtotal" readonly="1" widget="monetary"/>
+                                        <field name="currency_id" column_invisible="1"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="product_id"/>
+                                                <field name="quantity"/>
+                                                <field name="product_uom_id" readonly="1"/>
+                                                <field name="unit_price" widget="monetary" readonly="1"/>
+                                            </group>
+                                            <group>
+                                                <field name="price_tax" readonly="1" widget="monetary" string="Taxes"/>
+                                                <field name="price_total" readonly="1" widget="monetary" string="Total"/>
+                                                <field name="currency_id" invisible="1"/>
+                                            </group>
+                                            <field name="notes"/>
+                                        </group>
+                                    </form>
+                                </field>
+                                
+                                <!-- Totales al final DENTRO de la página Order Lines -->
+                                <group class="oe_subtotal_footer oe_right">
+                                    <!-- Subtotal -->
+                                    <div class="o_td_label">
+                                        <label for="amount_untaxed" string="Subtotal"/>
+                                    </div>
+                                    <field name="amount_untaxed" nolabel="1" widget="monetary" 
+                                           class="oe_subtotal_footer_range"/>
+
+                                    <!-- Impuestos -->
+                                    <div class="o_td_label">
+                                        <label for="amount_tax" string="Taxes"/>
+                                    </div>
+                                    <field name="amount_tax" nolabel="1" widget="monetary" 
+                                           class="oe_subtotal_footer_range"/>
+                                    
+                                    <!-- Separador visual antes del total -->
+                                    <div class="oe_subtotal_footer_separator oe_inline" colspan="2"/>
+                                    
+                                    <!-- Total final destacado -->
+                                    <label for="total_amount" string="Total" 
+                                            style="font-weight: bold; font-size: 22px; color: #1B5E20;"/>
+                                    <field name="total_amount" nolabel="1" 
+                                           class="oe_subtotal_footer_range" 
+                                           widget="monetary"
+                                           style="font-weight: bold; color: #2E7D32; font-size: 22px;"/>
+                                </group>
+                            </page>
+                            <page string="Delivery and Payment Info">
+                                <group>
+                                    <group string="Delivery Details">
+                                        <field name="delivery_address" readonly="1"/>
+                                        <field name="approved_by" readonly="1"/>
+                                        <field name="approved_date" readonly="1"/>
+                                        <field name="shipped_date" readonly="1"/>
+                                        <field name="delivered_date" readonly="1"/>
+                                    </group>
+                                    <group string="Payment Details">
+                                        <field name="payment_date" readonly="1"/>
+                                        <field name="outstanding_amount" readonly="1" widget="monetary"/>
+                                        <field name="days_overdue" readonly="1" 
+                                               decoration-danger="days_overdue > 0"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

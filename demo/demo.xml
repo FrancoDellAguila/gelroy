@@ -1,30 +1,20 @@
 <odoo>
-    <data>
-<!--
-          <record id="object0" model="franquicias.franquicias">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
-
-          <record id="object1" model="franquicias.franquicias">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
-
-          <record id="object2" model="franquicias.franquicias">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="franquicias.franquicias">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="franquicias.franquicias">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+    <data noupdate="0">
+        
+        <!-- PARTNER DE PRUEBA -->
+        <record id="partner_test" model="res.partner">
+            <field name="name">TEST Partner</field>
+            <field name="email">test@gelroy.com</field>
+        </record>
+        
+        <!-- FRANQUICIA DE PRUEBA -->
+        <record id="franchise_test" model="gelroy.franchise">
+            <field name="name">TEST Franchise</field>
+            <field name="franchise_code">TEST001</field>
+            <field name="franchisee_id" ref="partner_test"/>
+            <field name="franchise_type">restaurant</field>
+            <field name="currency_id" ref="base.EUR"/>
+        </record>
+        
     </data>
 </odoo>

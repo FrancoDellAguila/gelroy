@@ -1,0 +1,172 @@
+<odoo>
+    <data>
+        <!-- Recipe Form View -->
+        <record id="recipe_form_view" model="ir.ui.view">
+            <field name="name">recipe.form</field>
+            <field name="model">gelroy.recipe</field>
+            <field name="arch" type="xml">
+                <form string="Recipe">
+                    <style>
+                        .gelroy_bordered input,
+                        .gelroy_bordered textarea,
+                        .gelroy_bordered .o_input,
+                        .gelroy_bordered .o_field_widget input,
+                        .gelroy_bordered .o_field_widget textarea,
+                        .gelroy_bordered select {
+                            border: 1px solid #888 !important;
+                            border-radius: 4px;
+                            background: #fff !important;
+                        }
+                        
+                        .gelroy_bordered .o_field_monetary input {
+                            border: 1px solid #28a745 !important;
+                            border-radius: 4px;
+                            background: #f8fff9 !important;
+                        }
+                        
+                        .gelroy_bordered .o_field_date input,
+                        .gelroy_bordered .o_field_datetime input {
+                            border: 1px solid #d33000 !important;
+                            border-radius: 4px;
+                            background: #f8f9ff !important;
+                        }
+                        
+                        .gelroy_readonly input,
+                        .gelroy_readonly textarea,
+                        .gelroy_readonly .o_input {
+                            border: 1px solid #ccc !important;
+                            background: #f5f5f5 !important;
+                            color: #666 !important;
+                        }
+                    </style>
+                    
+                    <sheet>
+                        <div class="oe_title mb24">
+                            <label for="name" string="Recipe Name" style="font-size: 14px; color: #6c757d;"/>
+                            <h1>
+                                <field name="name" placeholder="Enter recipe name (e.g., Hamburger Buns, Pizza Dough)..." 
+                                       style="font-size: 32px; font-weight: bold; color: #2c3e50; border: 2px solid #d33000; border-radius: 6px; padding: 12px;"/>
+                            </h1>
+                        </div>
+                        
+                        <div class="gelroy_bordered">
+                            <group>
+                                <group>
+                                    <field name="code" placeholder="Recipe Code (e.g., HB-001, PD-002)"/>
+                                    <field name="category" placeholder="Category (e.g., Breads, Pastries, Desserts)"/>
+                                    <field name="production_size" placeholder="Batch size (e.g., 10, 20, 50)"/>
+                                    <field name="unit_of_measure" placeholder="Unit (e.g., units, kg, pieces, loaves)"/>
+                                </group>
+                                <group>
+                                    <field name="preparation_time" placeholder="Prep time in minutes (e.g., 30)"/>
+                                    <field name="cooking_time" placeholder="Cook time in minutes (e.g., 45)"/>
+                                    <field name="total_time"/>
+                                    <field name="ingredient_cost" widget="monetary"/>
+                                    <field name="cost_per_production" widget="monetary"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </group>
+                            </group>
+                        </div>
+                        
+                        <notebook>
+                            <page string="🧄 Ingredients">
+                                <div class="gelroy_bordered">
+                                    <field name="ingredient_ids">
+                                        <tree editable="bottom">
+                                            <field name="sequence" widget="handle"/>
+                                            <field name="product_id" placeholder="Search and select ingredient..."/>
+                                            <field name="quantity" placeholder="0.00"/>
+                                            <field name="product_uom_id" placeholder="Select unit..."/>
+                                            <field name="unit_price"/>
+                                            <field name="total_cost" widget="monetary"/>
+                                            <field name="currency_id" column_invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </div>
+                                
+                                <div class="alert alert-info mt8" role="alert">
+                                    <strong>💡 Tip:</strong> Add all ingredients needed for this recipe. 
+                                    Drag and drop to reorder ingredients in the preparation sequence.
+                                </div>
+                            </page>
+                        </notebook>
+                        
+                        <div class="mt16">
+                            <div style="border-top: 2px solid #dee2e6; margin: 16px 0;"></div>
+                            
+                            <div class="gelroy_bordered">
+                                <h3 style="margin: 8px 0; color: #495057; font-size: 16px;">
+                                    📝 Recipe Notes and Instructions
+                                </h3>
+                                <field name="description" nolabel="1" 
+                                    placeholder="Add detailed cooking instructions, preparation tips, storage notes, serving suggestions, and any other important recipe details..."
+                                                    style="min-height: 120px;"/>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Recipe Tree View -->
+        <record id="recipe_tree_view" model="ir.ui.view">
+            <field name="name">recipe.tree</field>
+            <field name="model">gelroy.recipe</field>
+            <field name="arch" type="xml">
+                <tree default_order="name">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="category"/>
+                    <field name="production_size"/>
+                    <field name="ingredient_cost" widget="monetary"/>
+                    <field name="cost_per_production" widget="monetary"/>
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Recipe Search View -->
+        <record id="recipe_search_view" model="ir.ui.view">
+            <field name="name">recipe.search</field>
+            <field name="model">gelroy.recipe</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="category"/>
+                    <field name="production_size"/>
+                    
+                    <filter string="Active" name="active" domain="[('active','=',True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active','=',False)]"/>
+                    <separator/>
+                    
+                    <!-- Agrupaciones -->
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_category" string="Category" context="{'group_by': 'category'}"/>
+                        <filter name="group_by_unit" string="Unit of Measure" context="{'group_by': 'unit_of_measure'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Recipe Action -->
+        <record id="action_recipe" model="ir.actions.act_window">
+            <field name="name">Recipes</field>
+            <field name="res_model">gelroy.recipe</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="recipe_search_view"/>
+            <field name="context">{
+                'search_default_group_by_category': 1,
+            }</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first recipe!
+                </p>
+                <p>
+                    Define recipes with ingredients, quantities, and cooking instructions.
+                    Monitor costs and production details for better planning.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

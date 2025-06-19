@@ -1,0 +1,237 @@
+<odoo>
+    <data>
+        <!-- Vista de formulario extendida (hereda de product) -->
+        <record id="product_template_franchise_form_view" model="ir.ui.view">
+            <field name="name">product.template.franchise.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <!-- OCULTAR TODAS LAS PESTAÑAS INDESEADAS -->
+                <page name="sales" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </page>
+                
+                <page name="purchase" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </page>
+
+                <page name="inventory" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </page>
+
+                <page name="invoicing" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </page>
+
+                <!-- OCULTAR SOLO CAMPOS QUE FUNCIONAN -->
+                <field name="categ_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <field name="product_tag_ids" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <!-- PESTAÑA PERSONALIZADA -->
+                <notebook position="inside">
+                    <page string="Franchise Settings">
+                        <group>
+                            <group string="📋 Configuration">
+                                <field name="product_availability"/>
+                                <field name="available_franchise_types"/>
+                            </group>
+                            <group string="💰 Pricing">
+                                <field name="list_price" widget="monetary" string="Sale Price"/>
+                                <field name="standard_price" widget="monetary" string="Cost Price"/>
+                                <field name="currency_id" invisible="1"/>
+                            </group>
+                        </group>
+                        
+                        <group string="📦 Quantity Restrictions">
+                            <group>
+                                <field name="min_franchise_qty"/>
+                                <field name="max_franchise_qty"/>
+                            </group>
+                            <group>
+                                <field name="franchise_qty_multiple"/>
+                            </group>
+                        </group>
+                        
+                        <group string="🏪 Franchise Availability">
+                            <field name="available_franchise_ids" widget="many2many_tags"/>
+                        </group>
+                    </page>
+                </notebook>
+
+                <!-- CSS PARA OCULTAR ELEMENTOS INDESEADOS -->
+                <xpath expr="//sheet" position="before">
+                    <style>
+                        /* Ocultar botón "Reponer" */
+                        button[name="457"] {
+                            display: none !important;
+                        }
+                        
+                        /* Ocultar botón "Configurar etiquetas" */
+                        button[name="313"] {
+                            display: none !important;
+                        }
+                        
+                        /* Ocultar campo "Etiquetas de la plantilla" */
+                        .o_field_widget[name="product_tag_ids"] {
+                            display: none !important;
+                        }
+                        
+                        /* Ocultar campo "Etiquetas adicionales" */
+                        .o_field_widget[name="additional_product_tag_ids"] {
+                            display: none !important;
+                        }
+                        
+                        /* Ocultar labels de etiquetas */
+                        label[for="product_tag_ids"],
+                        label[for="additional_product_tag_ids"] {
+                            display: none !important;
+                        }
+                        
+                        /* Ocultar cualquier div que contenga el botón 313 */
+                        .btn-link[name="313"] {
+                            display: none !important;
+                        }
+
+                        /* Selector específico del navegador */
+                        div.col-lg-6:nth-child(2) > div:nth-child(6) > label:nth-child(2) {
+                            display: none !important;
+                        }
+                        
+                        /* También ocultar el div padre completo */
+                        div.col-lg-6:nth-child(2) > div:nth-child(6) {
+                            display: none !important;
+                        }
+                    </style>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Vista Tree personalizada -->
+        <record id="product_template_franchise_tree_view" model="ir.ui.view">
+            <field name="name">product.template.franchise.tree</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <tree string="Products with Franchise Settings">
+                    <field name="name"/>
+                    <field name="default_code"/>
+                    <field name="available_franchise_types"/>
+                    <field name="list_price" widget="monetary"/>
+                    <field name="min_franchise_qty"/>
+                    <field name="product_availability"/>
+                    <field name="available_franchise_count"/>
+                    
+                    <field name="currency_id" invisible="1"/>
+                    <field name="active" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista Kanban -->
+        <record id="product_template_franchise_kanban_view" model="ir.ui.view">
+            <field name="name">product.template.franchise.kanban</field>
+            <field name="model">product.template</field>
+            <field name="arch" type="xml">
+                <kanban string="Products with Franchise Settings">
+                    <field name="name"/>
+                    <field name="list_price"/>
+                    <field name="available_franchise_types"/>
+                    <field name="product_availability"/>
+                    <field name="image_128"/>
+                    <field name="currency_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('product.template', 'image_128', record.id.raw_value)" 
+                                         alt="Product Image" class="o_image_64_contain"/>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name"/>
+                                    </strong>
+                                    <div class="o_kanban_record_subtitle">
+                                        <field name="available_franchise_types"/>
+                                    </div>
+                                    <div class="o_kanban_record_bottom">
+                                        <div class="oe_kanban_bottom_left">
+                                            <span class="badge badge-pill" 
+                                                  t-attf-class="badge-{{record.product_availability.raw_value == 'available' and 'success' or 'warning'}}">
+                                                <field name="product_availability"/>
+                                            </span>
+                                        </div>
+                                        <div class="oe_kanban_bottom_right">
+                                            <span class="text-muted">Price: </span>
+                                            <field name="list_price" widget="monetary"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Vista Search extendida -->
+        <record id="product_template_franchise_search_view" model="ir.ui.view">
+            <field name="name">product.template.franchise.search</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <filter name="filter_to_sell" position="after">
+                    <filter string="Product Available" name="product_available" 
+                            domain="[('product_availability', '=', 'available')]"/>
+                    <filter string="Product Discontinued" name="product_discontinued" 
+                            domain="[('product_availability', '=', 'discontinued')]"/>
+                </filter>
+                
+                <group position="inside">
+                    <filter string="Franchise Types" name="group_by_franchise_types" 
+                            context="{'group_by': 'available_franchise_types'}"/>
+                    <filter string="Product Availability" name="group_by_product_availability" 
+                            context="{'group_by': 'product_availability'}"/>
+                </group>
+            </field>
+        </record>
+
+        <!-- ACCIÓN PRINCIPAL ÚNICA -->
+        <record id="action_franchise_products" model="ir.actions.act_window">
+            <field name="name">Franchise Products</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'kanban', 'view_id': ref('product_template_franchise_kanban_view')}),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('product_template_franchise_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('product_template_franchise_form_view')})]"/>
+            <field name="context">{
+                'default_sale_ok': True,
+                'default_product_availability': 'available',
+                'default_detailed_type': 'product'
+            }</field>
+        </record>
+
+        <!-- ACCIÓN PARA CREAR-->
+        <record id="action_create_franchise_product" model="ir.actions.act_window">
+            <field name="name">Create Franchise Product</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="product_template_franchise_form_view"/>
+            <field name="target">new</field>
+            <field name="context">{
+                'default_sale_ok': True,
+                'default_product_availability': 'available',
+                'default_detailed_type': 'product'
+            }</field>
+            
+        </record>
+
+
+
+    </data>
+</odoo>

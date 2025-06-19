@@ -1,0 +1,162 @@
+<odoo>
+    <data>
+        <!-- Acción de ventana para Franquicias -->
+        <record id="franchise_action" model="ir.actions.act_window">
+            <field name="name">Franchises</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gelroy.franchise</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="gelroy.franchise_search_view"/> 
+            <field name="context">{'active_test': False}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new franchise record.
+                </p>
+            </field>
+        </record>
+
+        <!-- Acción de ventana para Pagos de Regalías -->
+        <record id="royalty_payment_action" model="ir.actions.act_window">
+            <field name="name">Royalty Payments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gelroy.royalty.payment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="gelroy.royalty_payment_search_view"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new royalty payment record.
+                </p>
+            </field>
+        </record>
+
+        <!-- Acción de ventana para Órdenes de Stock -->
+        <record id="stock_order_action" model="ir.actions.act_window">
+            <field name="name">Stock Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gelroy.stock.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="gelroy.stock_order_search_view"/> 
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new stock order.
+                </p>
+            </field>
+        </record>
+
+        <!-- : Acción del Dashboard  -->
+        <record id="action_franchise_dashboard" model="ir.actions.act_window">
+            <field name="name">Franchise Dashboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gelroy.franchise.dashboard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="franchise_operational_dashboard_view"/> 
+            <field name="target">current</field>
+            <field name="context">{
+                'create': False,
+                'edit': False,
+                'delete': False
+            }</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Welcome to the Franchise Dashboard!
+                </p>
+                <p>
+                    Here you can view key performance indicators and metrics for your franchise network.
+                </p>
+            </field>
+        </record>
+
+        <!-- Dashboard Ejecutivo -->
+        <record id="action_franchise_executive_dashboard" model="ir.actions.act_window">
+            <field name="name">Executive Dashboard</field>
+            <field name="res_model">gelroy.executive.dashboard</field> 
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="franchise_executive_dashboard_view"/>
+            <field name="target">current</field>
+        </record>
+
+        <!-- Dashboard Operativo -->
+        <record id="action_franchise_operational_dashboard" model="ir.actions.act_window">
+            <field name="name">Operational Dashboard</field>
+            <field name="res_model">gelroy.franchise.dashboard</field> 
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="franchise_operational_dashboard_view"/>
+            <field name="target">current</field>
+        </record>
+
+        <!-- Menús principales en la barra -->
+        <menuitem id="menu_gelroy_main" name="Gelroy" sequence="1"/>
+
+        <!-- 1. Franquicias -->
+        <menuitem id="menu_franchises" name="Franchises" 
+                  parent="menu_gelroy_main" 
+                  action="franchise_action" 
+                  sequence="1"/>
+
+        <!-- 2. Royalty Payments -->
+        <menuitem id="menu_royalty_payments" name="Royalty Payments" 
+                  parent="menu_gelroy_main" 
+                  action="royalty_payment_action" 
+                  sequence="2"/>
+
+        <!-- 3. Stock Orders -->
+        <menuitem id="menu_stock_orders" name="Stock Orders" 
+                  parent="menu_gelroy_main" 
+                  action="stock_order_action" 
+                  sequence="3"/>
+
+        <!-- 4. Products (con subitems) -->
+        <menuitem id="menu_franchise_products" name="Products" 
+                  parent="menu_gelroy_main" 
+                  sequence="4"/>
+
+        <menuitem id="menu_create_franchise_product" 
+                  name="Create Product" 
+                  parent="menu_franchise_products" 
+                  action="action_create_franchise_product" 
+                  sequence="10"/>
+
+        <menuitem id="menu_franchise_products_list" 
+                  name="All Products" 
+                  parent="menu_franchise_products" 
+                  action="product.product_normal_action_sell" 
+                  sequence="20"/>
+
+        <!-- 5. Production (con subitems) -->
+        <menuitem id="menu_production_management" name="Production" 
+                  parent="menu_gelroy_main" 
+                  sequence="5"/>
+
+        <menuitem id="menu_recipe" name="Recipes" 
+                  parent="menu_production_management" 
+                  action="action_recipe" 
+                  sequence="1"/>
+
+        <menuitem id="menu_production_planning" name="Production Planning" 
+                  parent="menu_production_management" 
+                  action="action_production_planning" 
+                  sequence="2"/>
+
+        <!-- 6. Dashboard -->
+        <!-- Menú Principal -->
+        <menuitem id="menu_franchise_dashboards" 
+                name="Dashboards" 
+                parent="menu_gelroy_main" 
+                sequence="6"/>
+
+        <!-- Sub-menús -->
+        <menuitem id="menu_franchise_executive_dashboard" 
+                name="Executive Dashboard" 
+                parent="menu_franchise_dashboards"
+                action="action_franchise_executive_dashboard" 
+                sequence="1"/>
+
+        <menuitem id="menu_franchise_operational_dashboard" 
+                name="Operational Dashboard" 
+                parent="menu_franchise_dashboards"
+                action="action_franchise_operational_dashboard" 
+                sequence="2"/>
+
+
+    </data>
+</odoo>

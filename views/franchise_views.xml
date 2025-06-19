@@ -8,24 +8,70 @@
                 <form string="Franchise">
                     <sheet>
                         <style>
+                            /* Campos normales */
                             .gelroy_bordered input,
                             .gelroy_bordered textarea,
-                            .gelroy_bordered .o_input {
+                            .gelroy_bordered .o_input,
+                            .gelroy_bordered select {
                                 border: 1px solid #888 !important;
                                 border-radius: 4px;
                                 background: #fff !important;
                             }
+                            
+                            /* Campos monetarios */
+                            .gelroy_bordered .o_field_monetary input {
+                                border: 1px solid #28a745 !important;
+                                border-radius: 4px;
+                                background: #f8fff9 !important;
+                            }
+                            
+                            /* Campos de porcentaje (como royalty_fee_percentage) */
+                            .gelroy_bordered .o_field_float input {
+                                border: 1px solid #28a745 !important;
+                                border-radius: 4px;
+                                background: #f8fff9 !important;
+                            }
+                            
+                            /* Campos de fecha */
+                            .gelroy_bordered .o_field_date input,
+                            .gelroy_bordered .o_field_datetime input {
+                                border: 1px solid #d33000 !important;
+                                border-radius: 4px;
+                                background: #f8f9ff !important;
+                            }
+                            
+                            /* Campos readonly */
+                            .gelroy_bordered input[readonly],
+                            .gelroy_bordered textarea[readonly] {
+                                border: 1px solid #ccc !important;
+                                background: #f5f5f5 !important;
+                                color: #666 !important;
+                            }
+                            
+                            /* Nombre de franquicia con borde naranja - MÁS GRANDE */
+                            .gelroy_bordered .oe_title h1 input {
+                                border: 3px solid #ff9800 !important;
+                                border-radius: 8px;
+                                background: #fff8e1 !important;
+                                font-size: 24px !important;
+                                padding: 12px !important;
+                                min-height: 50px !important;
+                            }
                         </style>
-                        <!-- Botón pago de regalías -->
                         <div class="oe_button_box" name="button_box">
                             <button name="action_view_royalty_payments"
                                 type="object"
                                 class="oe_stat_button"
-                                icon="fa-money"> 
+                                icon="fa-money">
                                 <field name="royalty_payment_count" widget="statinfo" string="Royalty Payments"/>
                             </button>
+                            <button name="action_view_stock_orders"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-truck">
+                                <field name="stock_order_count" widget="statinfo" string="Stock Orders"/>
+                            </button>
                         </div>
-                        <!-- Inicio del div con bordes -->
                         <div class="gelroy_bordered">
                             <field name="image" widget="image" class="oe_avatar"/>
                             <div class="oe_title">
@@ -41,41 +87,49 @@
                                     <field name="franchisee_id"/>
                                     <field name="franchise_type"/>
                                     <field name="opening_date"/>
-                                    <field name="active"/>
                                 </group>
                                 <group>
                                     <label for="street" string="Address"/>
                                     <div class="o_address_format">
                                         <field name="street" placeholder="Street..."/>
-                                        <field name="street2" placeholder="Street 2..."/>
                                         <field name="city" placeholder="City"/>
                                         <field name="state_id" placeholder="State" options='{"no_open": True}'/>
                                         <field name="zip" placeholder="ZIP"/>
                                         <field name="country_id" placeholder="Country" options='{"no_open": True, "no_create": True}'/>
                                     </div>
                                     <field name="phone" widget="phone"/>
-                                    <field name="mobile" widget="phone"/>
                                     <field name="email" widget="email"/>
                                 </group>
                             </group>
                             <notebook>
                                 <page string="Contract &amp; Financials">
                                     <group>
-                                        <field name="contract_start_date"/>
-                                        <field name="contract_end_date"/>
-                                        <field name="contract_duration_months"/> 
-                                        <field name="royalty_fee_percentage"/>
-                                        <field name="currency_id"/>
+                                        <group string="Contract Terms">
+                                            <field name="contract_start_date"/>
+                                            <field name="contract_end_date"/>
+                                            <field name="contract_duration_months"/>
+                                            <field name="royalty_fee_percentage"/>
+                                            <field name="currency_id"/>
+                                        </group>
+                                        <group string="Outstanding Debts">
+                                            <field name="outstanding_royalties" widget="monetary" 
+                                                    decoration-warning="outstanding_royalties > 0"/>
+                                            <field name="outstanding_stock_orders" widget="monetary" 
+                                                    decoration-warning="outstanding_stock_orders > 0"/>
+                                            <field name="total_outstanding_debt" widget="monetary" 
+                                                    decoration-danger="total_outstanding_debt > 0"
+                                                    style="font-weight: bold; font-size: 1.2em;"/>
+                                        </group>
                                     </group>
                                 </page>
-                                <page string="Description">
-                                    <field name="description"/>
-                                </page>
-                                <page string="Internal Notes">
-                                    <field name="notes"/>
-                                </page>
                             </notebook>
-                        </div> <!-- Fin del div con bordes -->
+                            
+                            <separator string="Internal Notes" style="margin-top: 20px;"/>
+                            <field name="notes" 
+                                   nolabel="1" 
+                                   placeholder="Add internal notes about this franchise..." 
+                                   style="min-height: 100px; margin: 10px 0;"/>
+                        </div>
                     </sheet>
                     <div class="oe_chatter">
                         <field name="message_follower_ids"/>
@@ -98,6 +152,10 @@
                     <field name="city"/>
                     <field name="franchise_type"/>
                     <field name="active" widget="boolean_toggle"/>
+                    <field name="pending_royalty_payments"/>
+                    <field name="pending_stock_orders_count"/>
+                    <field name="total_outstanding_debt" widget="monetary" sum="Total Debt"/>
+                    <field name="currency_id" column_invisible="1"/>
                 </tree>
             </field>
         </record>
@@ -123,23 +181,5 @@
                 </search>
             </field>
         </record>
-
-        <!-- Acción de ventana -->
-        <record id="franchise_action" model="ir.actions.act_window">
-            <field name="name">Franchises</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">gelroy.franchise</field>
-            <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="franchise_search_view"/>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">
-                    Create a new franchise record.
-                </p>
-            </field>
-        </record>
-
-        <!-- Menús -->
-        <menuitem id="menu_franchise_root" name="Franchise Management" sequence="10"/>
-        <menuitem id="menu_franchises" name="Franchises" parent="menu_franchise_root" action="franchise_action" sequence="1"/>
     </data>
 </odoo>
