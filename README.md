@@ -154,6 +154,6 @@ Este proyecto sienta una base sólida que puede ser extendida en varias direccio
 
 Franco Dell Aguila Ureña
 
-    GitHub: [FrancoDellAguila](https://github.com/FrancoDellAguila)
+GitHub: [FrancoDellAguila](https://github.com/FrancoDellAguila)
 
-    LinkedIn: [in/franco-dell-aguila](https://www.linkedin.com/in/franco-dell-aguila/)
+LinkedIn: [in/franco-dell-aguila](https://www.linkedin.com/in/franco-dell-aguila/)
