@@ -93,13 +93,29 @@ El módulo gelroy sigue la estructura estándar de Odoo:
 ## 🖼️ Vistas Previas
 
 ### Panel Ejecutivo Global
+<p align="center">
+  <img src="static/description/panel_ejec.png" alt="Banner del proyecto" width="100%">
+</p>
 
-### Panel Ejecutivo
+### Panel Operativo
+<p align="center">
+  <img src="static/description/panel_op.png" alt="Banner del proyecto" width="100%">
+</p>
+
+### Formulario de Franquicia
+<p align="center">
+  <img src="static/description/franquicia.png" alt="Banner del proyecto" width="100%">
+</p>
+
+### Formulario de Regalía
+<p align="center">
+  <img src="static/description/regalia.png" alt="Banner del proyecto" width="100%">
+</p>
 
 ### Formulario de Pedido de Stock
-
-### Formulario de Pedido
-
+<p align="center">
+  <img src="static/description/pedido_stock.png" alt="Banner del proyecto" width="100%">
+</p>
 
 ##💡 Trabajo Futuro y Puntos de Extensión
 
