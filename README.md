@@ -1,6 +1,8 @@
-# Sistema de Gestión de Franquicias (SGF) en Odoo
+# Sistema de Gestión de Franquicias en Odoo
 
-![Banner del proyecto](link_a_una_imagen_de_banner.png)
+<p align="center">
+  <img src="static/description/banner.png" alt="Banner del proyecto" width="100%">
+</p>
 
 Este repositorio contiene el código fuente del módulo **gelroy**, un Sistema de Gestión de Franquicias desarrollado sobre la plataforma **Odoo 17**. Este proyecto fue realizado como parte de un Trabajo de Fin de Grado en Ingeniería Informática.
 
@@ -25,7 +27,7 @@ El objetivo principal de este módulo es proporcionar una solución integral y c
 - Estados personalizables (Enviado, Aprobado, En Tránsito, Entregado, etc.).
 - Validación de stock y deducción simplificada del inventario.
 
-### 🏭 Planificación de Producción (para Franquiciados)
+### 🏭 Planificación de Producción
 - Creación de recetas con ingredientes y costes calculados.
 - Planificación de la producción basada en recetas.
 - Generación automática de pedidos de stock de ingredientes a partir de una planificación confirmada.
@@ -58,7 +60,6 @@ El objetivo principal de este módulo es proporcionar una solución integral y c
 - Odoo 17 funcionando correctamente.
 - PostgreSQL 15 o superior.
 - Python 3.11 o superior.
-- Dependencias de Odoo 17 instaladas (ver `requirements.txt` de Odoo).
 
 ### Pasos de Instalación
 
@@ -91,7 +92,6 @@ El módulo gelroy sigue la estructura estándar de Odoo:
 
 ## 🖼️ Vistas Previas
 
-(Aquí puedes incluir algunas de las capturas de pantalla más representativas de tu presentación)
 ### Panel Ejecutivo Global
 
 ### Panel Ejecutivo
