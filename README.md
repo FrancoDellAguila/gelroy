@@ -1,4 +1,4 @@
-# Sistema de Gestión de Franquicias (SGF) para Odoo 17
+# Sistema de Gestión de Franquicias (SGF) en Odoo
 
 ![Banner del proyecto](link_a_una_imagen_de_banner.png)
 
