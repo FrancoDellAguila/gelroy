@@ -94,48 +94,48 @@ El módulo gelroy sigue la estructura estándar de Odoo:
 
 ### Panel Ejecutivo
 <p align="center">
-  <img src="static/description/panel_ejec.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/panel_ejec.png" alt="Panel Ejecutivo" width="100%">
 </p>
 
 ### Panel Operativo
 <p align="center">
-  <img src="static/description/panel_op.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/panel_op.png" alt="Panel Operativo" width="100%">
 </p>
 
 ### Formulario de Franquicia
 <p align="center">
-  <img src="static/description/franquicia.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/franquicia.png" alt="Formulario de Franquicia" width="100%">
 </p>
 
 ### Formulario de Regalía
 <p align="center">
-  <img src="static/description/reg.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/reg.png" alt="Formulario de Regalía" width="100%">
 </p>
 <p align="center">
-  <img src="static/description/fac_reg.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/fac_reg.png" alt="Formulario de Regalía" width="100%">
 </p>
 
 ### Formulario de Pedido de Stock
 <p align="center">
-  <img src="static/description/stock.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/stock.png" alt="Formulario de Pedido de Stock" width="100%">
 </p>
 <p align="center">
-  <img src="static/description/fac_stock.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/fac_stock.png" alt="Formulario de Pedido de Stock" width="100%">
 </p>
 
 ### Formulario de Producto
 <p align="center">
-  <img src="static/description/prod.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/prod.png" alt="Formulario de Producto" width="100%">
 </p>
 
 ### Formulario de Receta
 <p align="center">
-  <img src="static/description/rec.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/receta.png" alt="Formulario de Receta" width="100%">
 </p>
 
 ### Formulario de Producción
 <p align="center">
-  <img src="static/description/prod.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/prod.png" alt="Formulario de Producción" width="100%">
 </p>
 
 ## 💡 Trabajo Futuro y Puntos de Extensión
