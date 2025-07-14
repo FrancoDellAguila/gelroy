@@ -1,7 +1,7 @@
 # Sistema de Gestión de Franquicias en Odoo
 
 <p align="center">
-  <img src="static/description/banner.png" alt="Banner del proyecto" width="100%">
+  <img src="static/description/Banner.png" alt="Banner del proyecto" width="100%">
 </p>
 
 Este repositorio contiene el código fuente del módulo **gelroy**, un Sistema de Gestión de Franquicias desarrollado sobre la plataforma **Odoo 17**. Este proyecto fue realizado como parte de un Trabajo de Fin de Grado en Ingeniería Informática.
