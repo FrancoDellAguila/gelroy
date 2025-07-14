@@ -117,7 +117,7 @@ El módulo gelroy sigue la estructura estándar de Odoo:
   <img src="static/description/pedido_stock.png" alt="Banner del proyecto" width="100%">
 </p>
 
-##💡 Trabajo Futuro y Puntos de Extensión
+## 💡 Trabajo Futuro y Puntos de Extensión
 
 Este proyecto sienta una base sólida que puede ser extendida en varias direcciones:
 
