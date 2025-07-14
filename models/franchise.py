@@ -94,10 +94,8 @@ class Franchise(models.Model):
     @api.depends('contract_start_date', 'contract_end_date')
     def _compute_contract_duration(self):
         for rec in self:
-            # Verifica que ambas fechas existan y la fecha de fin sea posterior a la de inicio.
             if rec.contract_start_date and rec.contract_end_date and rec.contract_end_date > rec.contract_start_date:
                 delta = relativedelta(rec.contract_end_date, rec.contract_start_date)
-                # Convierte la diferencia a meses (años * 12 + meses).
                 rec.contract_duration_months = delta.years * 12 + delta.months
             else:
                 rec.contract_duration_months = 0
